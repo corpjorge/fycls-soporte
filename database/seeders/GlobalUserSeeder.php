@@ -21,6 +21,7 @@ class GlobalUserSeeder extends Seeder
             'name' => 'Jorge Eduardo Peralta Guzman',
             'email' => 'corpjorge@hotmail.com',
             'password' => Hash::make('admin'),
+            'workplace_id' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -31,30 +32,21 @@ class GlobalUserSeeder extends Seeder
             'name' => 'John Freddy Moreno',
             'email' => 'john.moreno@fyclsingenieria.com',
             'password' => Hash::make('12342wefdgsasdf@'),
+            'workplace_id' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('users')->insert([
             'id' => 3,
-            'role_id' => 1,
-            'name' => 'Asociados',
-            'email' => 'Asociados',
+            'role_id' => 2,
+            'name' => 'Corp Jorge',
+            'email' => 'corjorge@hotmail',
             'password' => Hash::make('12342wefdgsasdf@'),
+            'workplace_id' => 2,
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
-        DB::table('users')->insert([
-            'id' => 4,
-            'role_id' => 9,
-            'name' => 'Eduardo Peralta Jorge Guzman',
-            'email' => 'corpjorge@gmail.com',
-            'password' => Hash::make('admin'),
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
-
-        \App\Models\User::factory(2000)->create();
     }
 }

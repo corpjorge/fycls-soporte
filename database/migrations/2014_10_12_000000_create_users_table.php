@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('role_id')->constrained();
+            $table->foreignId('workplace_id')->constrained();
             $table->softDeletes();
             $table->timestamps();
         });

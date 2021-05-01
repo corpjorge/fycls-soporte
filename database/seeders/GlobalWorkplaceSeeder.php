@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class GlobalRoleSeeder extends Seeder
+class GlobalWorkplaceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,30 +14,26 @@ class GlobalRoleSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('roles')->insert([
+        DB::table('workplaces')->insert([
             'id' => 1,
-            'name' => 'Administrador',
+            'name' => 'FYCLS Ingenieria',
+            'domain' => 'fyclsingenieria.com',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
-        DB::table('roles')->insert([
+        DB::table('workplaces')->insert([
             'id' => 2,
-            'name' => 'Técnico',
+            'name' => 'Fonsodi',
+            'domain' => 'fonsodi.com',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
-        DB::table('roles')->insert([
+        DB::table('workplaces')->insert([
             'id' => 3,
-            'name' => 'Coordinador',
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
-
-        DB::table('roles')->insert([
-            'id' => 4,
-            'name' => 'usuario',
+            'name' => 'Gmail',
+            'domain' => 'gmail.com',
             'created_at' => now(),
             'updated_at' => now()
         ]);

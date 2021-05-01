@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <title>
-        Fycls Ingenieria
+        Fycls Ingeniería
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -31,11 +31,11 @@
                         FYCLS Ingenieria
                     </a>
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon mt-2">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </span>
+                      <span class="navbar-toggler-icon mt-2">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                      </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navigation">
                         <ul class="navbar-nav mx-auto">
@@ -54,7 +54,7 @@
                         </ul>
                         <ul class="navbar-nav d-lg-block d-none">
                             <li class="nav-item">
-                                <a href="https://www.creative-tim.com/product/soft-ui-dashboard" class="btn btn-sm btn-round mb-0 me-1 bg-gradient-dark">Descargas</a>
+                                <a href="https://fyclsingenieria.com/descargas" class="btn btn-sm btn-round mb-0 me-1 bg-gradient-dark" target="_blank">Descargas</a>
                             </li>
                         </ul>
                     </div>
@@ -75,28 +75,35 @@
                             <p class="mb-0">Ingrese su correo electrónico y contraseña para iniciar sesión</p>
                         </div>
                         <div class="card-body">
-                            <form role="form text-left">
+                            <form action="{{ route('login') }}" role="form text-left" method="post" autocomplete="off">
+                                @csrf
                                 <label>Email</label>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                                    <input name="email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                                    @if ($errors->has('email'))
+                                        <span id="{{ 'email' }}-error" class="error text-danger" for="input-{{ 'email' }}" style="display: block;">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div>
                                 <label>Password</label>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                    <input name="password" type="email" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                    @if ($errors->has('password'))
+                                        <span id="{{ 'password' }}-error" class="error text-danger" for="input-{{ 'password' }}" style="display: block;">{{ $errors->first('password') }}</span>
+                                    @endif
                                 </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
                                     <label class="form-check-label" for="rememberMe">Recuérdame</label>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Entrar</button>
+                                    <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Entrar</button>
                                 </div>
                             </form>
                         </div>
                         <div class="card-footer text-center pt-0 px-lg-2 px-1">
                             <p class="mb-4 text-sm mx-auto">
                                 ¿No tienes una cuenta?
-                                <a href="javascript:;" class="text-info text-gradient font-weight-bold">Registrarse</a>
+                                <a href=" {{ route('register') }}" class="text-info text-gradient font-weight-bold">Registrarse</a>
                             </p>
                         </div>
                     </div>
@@ -110,17 +117,7 @@
         </div>
     </div>
 </section>
-<!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-<footer class="footer py-4 fixed-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mb-4 mx-auto text-center">
 
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
 <!--   Core JS Files   -->
 <script src="/js/core/popper.min.js"></script>
 <script src="/js/core/bootstrap.min.js"></script>

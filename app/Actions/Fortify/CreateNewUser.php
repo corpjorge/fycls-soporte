@@ -32,6 +32,11 @@ class CreateNewUser implements CreatesNewUsers
             'password' => $this->passwordRules(),
         ])->validate();
 
+
+        preg_match_all("/[\._a-zA-Z0-9-]+/i", $input['email'], $matches);
+
+        dd($matches[0]);
+
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],

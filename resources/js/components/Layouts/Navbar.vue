@@ -96,7 +96,7 @@
                         </ul>
                     </li>
                     <li class="nav-item d-flex align-items-center">
-                        <a @click="logout" class="nav-link text-body font-weight-bold px-0">
+                        <a style="cursor: pointer;" @click="logout" class="nav-link text-body font-weight-bold px-0">
                             <span class="d-sm-inline d-none">Salir</span>
                         </a>
                     </li>
@@ -107,6 +107,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     name: "Navbar",
     methods: {
@@ -130,9 +132,9 @@ export default {
                 iconSidenav.classList.remove('d-none');
             }
         },
-        logout() {
-            
-
+        async logout() {
+            await axios.post('/logout')
+            await window.location.assign("/")
         }
     }
 }

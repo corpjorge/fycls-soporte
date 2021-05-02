@@ -86,7 +86,7 @@
                                 </div>
                                 <label>Password</label>
                                 <div class="mb-3">
-                                    <input name="password" type="email" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                    <input name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
                                     @if ($errors->has('password'))
                                         <span id="{{ 'password' }}-error" class="error text-danger" for="input-{{ 'password' }}" style="display: block;">{{ $errors->first('password') }}</span>
                                     @endif

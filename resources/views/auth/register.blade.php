@@ -81,13 +81,13 @@
                         <form role="form text-left" method="post" action="{{ route('register') }}" autocomplete="off">
                             @csrf
                             <div class="mb-3">
-                                <input name="name" type="text" class="form-control" placeholder="Nombre" aria-label="Name" aria-describedby="email-addon">
+                                <input name="name" type="text" class="form-control" placeholder="Nombre" aria-label="Name" aria-describedby="email-addon" value="{{ old('name') }}">
                                 @if ($errors->has('name'))
                                     <span id="{{ 'name' }}-error" class="error text-danger" for="input-{{ 'name' }}" style="display: block;">{{ $errors->first('name') }}</span>
                                 @endif
                             </div>
                             <div class="mb-3">
-                                <input name="email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                                <input name="email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
                                     <span id="{{ 'email' }}-error" class="error text-danger" for="input-{{ 'email' }}" style="display: block;">{{ $errors->first('email') }}</span>
                                 @endif

@@ -3,10 +3,12 @@
 namespace App\Actions\Fortify;
 
 use App\Models\User;
+use App\Models\Workplace;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Illuminate\Validation\ValidationException;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -35,12 +37,25 @@ class CreateNewUser implements CreatesNewUsers
 
         preg_match_all("/[\._a-zA-Z0-9-]+/i", $input['email'], $matches);
 
-        dd($matches[0]);
+        $workplace =  Workplace::where('domain',$matches[0][1])->first();
 
-        return User::create([
+        if (!$workplace){
+            throw ValidationException::withMessages([
+                'email' => ['No es posible realizar su registro.'],
+            ]);
+        }
+
+        $user = new User;
+        $user->fill([
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
+
+        $user->role_id = 4;
+        $user->workplace_id = $workplace->id;
+        $user->save();
+
+        return $user;
     }
 }

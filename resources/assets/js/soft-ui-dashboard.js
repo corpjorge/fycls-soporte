@@ -253,9 +253,9 @@ function navbarBlurOnScroll(id) {
   }
 
   function transparentNavbar() {
+      return false;
     navbar.classList.remove(...classes)
     navbar.classList.add(...toggleClasses)
-
     toggleNavLinksColor('transparent');
   }
 

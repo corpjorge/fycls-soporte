@@ -261,6 +261,8 @@ function navbarBlurOnScroll(id) {
   function transparentNavbar() {
     var _navbar$classList5, _navbar$classList6;
 
+    return false;
+
     (_navbar$classList5 = navbar.classList).remove.apply(_navbar$classList5, classes);
 
     (_navbar$classList6 = navbar.classList).add.apply(_navbar$classList6, toggleClasses);

@@ -72,9 +72,14 @@
                     <div class="card card-plain mt-8">
                         <div class="card-header pb-0 text-left bg-transparent">
                             <h3 class="font-weight-bolder text-info text-gradient">Soporte al cliente</h3>
-                            <p class="mb-0">Ingrese su correo electrónico y contraseña para iniciar sesión</p>
+                            <p class="mb-0">Ingresa tu correo electrónico y contraseña para iniciar sesión</p>
                         </div>
                         <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-info" role="alert" style="color: white">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
                             <form action="{{ route('login') }}" role="form text-left" method="post" autocomplete="off">
                                 @csrf
                                 <label>Email</label>
@@ -104,6 +109,10 @@
                             <p class="mb-4 text-sm mx-auto">
                                 ¿No tienes una cuenta?
                                 <a href=" {{ route('register') }}" class="text-info text-gradient font-weight-bold">Registrarse</a>
+                            </p>
+                            <p class="mb-4 text-sm mx-auto">
+                                ¿Olvidas te tu contraseña?
+                                <a href=" {{ url('/forgot-password') }}" class="text-info text-gradient font-weight-bold">Solicitar</a>
                             </p>
                         </div>
                     </div>

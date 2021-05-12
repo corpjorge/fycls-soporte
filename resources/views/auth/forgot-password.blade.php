@@ -67,7 +67,6 @@
 <!-- End Navbar -->
 <section class="h-100-vh mb-0">
     <div class="page-header align-items-start section-height-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('/img/curved-images/curved14.jpg');">
-        <span class="mask bg-gradient-dark opacity-6"></span>
 
     </div>
     <div class="container">
@@ -75,39 +74,27 @@
             <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                 <div class="card z-index-0">
                     <div class="card-header text-center pt-4">
-                        <h5>Registrarse</h5>
+                        <h5>Recuperar contraseña</h5>
                     </div>
                     <div class="card-body">
-                        <form role="form text-left" method="post" action="{{ route('register') }}" autocomplete="off">
+                        @if (session('status'))
+                            <div class="alert alert-info" role="alert" style="color: white">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <form role="form text-left" method="post" action="{{ url('/forgot-password') }}" autocomplete="off">
                             @csrf
                             <div class="mb-3">
-                                <input name="name" type="text" class="form-control" placeholder="Nombre" aria-label="Name" aria-describedby="email-addon" value="{{ old('name') }}">
-                                @if ($errors->has('name'))
-                                    <span id="{{ 'name' }}-error" class="error text-danger" for="input-{{ 'name' }}" style="display: block;">{{ $errors->first('name') }}</span>
-                                @endif
-                            </div>
-                            <div class="mb-3">
-                                <input name="email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" value="{{ old('email') }}">
+                                <input name="email" type="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="email-addon" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
                                     <span id="{{ 'email' }}-error" class="error text-danger" for="input-{{ 'email' }}" style="display: block;">{{ $errors->first('email') }}</span>
                                 @endif
                             </div>
-                            <div class="mb-3">
-                                <input name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
-                                @if ($errors->has('password'))
-                                    <span id="{{ 'password' }}-error" class="error text-danger" for="input-{{ 'password' }}" style="display: block;">{{ $errors->first('password') }}</span>
-                                @endif
-                            </div>
-                            <div class="mb-3">
-                                <input name="password_confirmation" type="password" class="form-control" placeholder="Confirmar password" aria-label="Password" aria-describedby="password-addon">
-                                @if ($errors->has('password_confirmation '))
-                                    <span id="{{ 'password_confirmation ' }}-error" class="error text-danger" for="input-{{ 'password_confirmation ' }}" style="display: block;">{{ $errors->first('password_confirmation ') }}</span>
-                                @endif
-                            </div>
                             <div class="text-center">
-                                <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Ingresar</button>
+                                <button type="submit" class="btn bg-gradient-dark w-100 my-2 mb-2">Solicitar</button>
                             </div>
-                            <p class="text-sm mt-3 mb-0">Olvidaste mi contraseña: <a href="{{ url('/forgot-password') }}" class="text-dark font-weight-bolder">Solicitar</a></p>
+                            <p class="text-sm mt-3 mb-0">¿No tienes una cuenta?: <a href="{{ route('register') }}" class="text-dark font-weight-bolder">Registrarse</a></p>
                         </form>
                     </div>
                 </div>

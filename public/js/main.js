@@ -17236,7 +17236,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "nav-link-text ms-1"
-}, "Dashboard", -1
+}, "Solicitudes", -1
 /* HOISTED */
 );
 
@@ -17442,7 +17442,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row\"><div class=\"col-12\"><div class=\"card mb-4\"><div class=\"card-header pb-0\"><h6>Authors table</h6></div><div class=\"card-body px-0 pt-0 pb-2\"><div class=\"table-responsive p-0\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Author</th><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2\">Function</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Status</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Employed</th><th class=\"text-secondary opacity-7\"></th></tr></thead><tbody><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-2.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">John Michael</h6><p class=\"text-xs text-secondary mb-0\">john@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Manager</p><p class=\"text-xs text-secondary mb-0\">Organization</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-success\">Online</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">23/04/18</span></td><td class=\"align-middle\"><a href=\"javascript:;\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-3.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">Alexa Liras</h6><p class=\"text-xs text-secondary mb-0\">alexa@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Programator</p><p class=\"text-xs text-secondary mb-0\">Developer</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-secondary\">Offline</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">11/01/19</span></td><td class=\"align-middle\"><a href=\"#!\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-4.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">Laurent Perrier</h6><p class=\"text-xs text-secondary mb-0\">laurent@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Executive</p><p class=\"text-xs text-secondary mb-0\">Projects</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-success\">Online</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">19/09/17</span></td><td class=\"align-middle\"><a href=\"#!\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-3.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">Michael Levi</h6><p class=\"text-xs text-secondary mb-0\">michael@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Programator</p><p class=\"text-xs text-secondary mb-0\">Developer</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-success\">Online</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">24/12/08</span></td><td class=\"align-middle\"><a href=\"#!\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-2.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">Richard Gran</h6><p class=\"text-xs text-secondary mb-0\">richard@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Manager</p><p class=\"text-xs text-secondary mb-0\">Executive</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-secondary\">Offline</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">04/10/21</span></td><td class=\"align-middle\"><a href=\"#!\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-4.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">Miriam Eric</h6><p class=\"text-xs text-secondary mb-0\">miriam@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Programtor</p><p class=\"text-xs text-secondary mb-0\">Developer</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-secondary\">Offline</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">14/09/20</span></td><td class=\"align-middle\"><a href=\"#!\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr></tbody></table></div></div></div></div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row\"><div class=\"col-12\"><div class=\"card mb-4\"><div class=\"card-header pb-0\"><h6>Solicitudes</h6></div><div class=\"card-body px-0 pt-0 pb-2\"><div class=\"table-responsive p-0\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">id</th><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2\">-</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">x</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">x</th><th class=\"text-secondary opacity-7\"></th></tr></thead><tbody><tr><td><div class=\"d-flex px-2 py-1\"><div><img src=\"/img/team-2.jpg\" class=\"avatar avatar-sm me-3\"></div><div class=\"d-flex flex-column justify-content-center\"><h6 class=\"mb-0 text-sm\">John Michael</h6><p class=\"text-xs text-secondary mb-0\">john@creative-tim.com</p></div></div></td><td><p class=\"text-xs font-weight-bold mb-0\">Manager</p><p class=\"text-xs text-secondary mb-0\">Organization</p></td><td class=\"align-middle text-center text-sm\"><span class=\"badge badge-sm bg-gradient-success\">Online</span></td><td class=\"align-middle text-center\"><span class=\"text-secondary text-xs font-weight-bold\">23/04/18</span></td><td class=\"align-middle\"><a href=\"javascript:;\" class=\"text-secondary font-weight-bold text-xs\" data-toggle=\"tooltip\" data-original-title=\"Edit user\"> Edit </a></td></tr></tbody></table></div></div></div></div></div>", 1);
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "row"
@@ -17452,7 +17452,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   "class": "card mb-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "card-header pb-0"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Projects table")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Solicitudes")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "card-body px-0 pt-0 pb-2"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "table-responsive p-0"
@@ -17460,13 +17460,13 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   "class": "table align-items-center justify-content-center mb-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
   "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-}, "Project"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
+}, "id"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
   "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-}, "Budget"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
+}, "-"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
   "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-}, "Status"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
+}, "x"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", {
   "class": "text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2"
-}, "Completion"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tbody", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+}, "x"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tbody", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "d-flex px-2"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "/img/small-logos/logo-spotify.svg",
@@ -17500,196 +17500,6 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   "class": "align-middle"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   "class": "btn btn-link text-secondary mb-0"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-ellipsis-v text-xs"
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex px-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "/img/small-logos/logo-invision.svg",
-  "class": "avatar avatar-sm rounded-circle me-2"
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "my-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", {
-  "class": "mb-0 text-sm"
-}, "Invision")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "text-sm font-weight-bold mb-0"
-}, "$5,000")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "text-xs font-weight-bold"
-}, "done")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex align-items-center justify-content-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "me-2 text-xs font-weight-bold"
-}, "100%"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress-bar bg-gradient-success",
-  role: "progressbar",
-  "aria-valuenow": "100",
-  "aria-valuemin": "0",
-  "aria-valuemax": "100",
-  style: {
-    "width": "100%"
-  }
-})])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn btn-link text-secondary mb-0",
-  "aria-haspopup": "true",
-  "aria-expanded": "false"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-ellipsis-v text-xs"
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex px-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "/img/small-logos/logo-jira.svg",
-  "class": "avatar avatar-sm rounded-circle me-2"
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "my-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", {
-  "class": "mb-0 text-sm"
-}, "Jira")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "text-sm font-weight-bold mb-0"
-}, "$3,400")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "text-xs font-weight-bold"
-}, "canceled")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex align-items-center justify-content-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "me-2 text-xs font-weight-bold"
-}, "30%"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress-bar bg-gradient-danger",
-  role: "progressbar",
-  "aria-valuenow": "30",
-  "aria-valuemin": "0",
-  "aria-valuemax": "30",
-  style: {
-    "width": "30%"
-  }
-})])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn btn-link text-secondary mb-0",
-  "aria-haspopup": "true",
-  "aria-expanded": "false"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-ellipsis-v text-xs"
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex px-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "/img/small-logos/logo-slack.svg",
-  "class": "avatar avatar-sm rounded-circle me-2"
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "my-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", {
-  "class": "mb-0 text-sm"
-}, "Slack")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "text-sm font-weight-bold mb-0"
-}, "$1,000")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "text-xs font-weight-bold"
-}, "canceled")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex align-items-center justify-content-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "me-2 text-xs font-weight-bold"
-}, "0%"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress-bar bg-gradient-success",
-  role: "progressbar",
-  "aria-valuenow": "0",
-  "aria-valuemin": "0",
-  "aria-valuemax": "0",
-  style: {
-    "width": "0%"
-  }
-})])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn btn-link text-secondary mb-0",
-  "aria-haspopup": "true",
-  "aria-expanded": "false"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-ellipsis-v text-xs"
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex px-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "/img/small-logos/logo-webdev.svg",
-  "class": "avatar avatar-sm rounded-circle me-2"
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "my-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", {
-  "class": "mb-0 text-sm"
-}, "Webdev")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "text-sm font-weight-bold mb-0"
-}, "$14,000")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "text-xs font-weight-bold"
-}, "working")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex align-items-center justify-content-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "me-2 text-xs font-weight-bold"
-}, "80%"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress-bar bg-gradient-info",
-  role: "progressbar",
-  "aria-valuenow": "80",
-  "aria-valuemin": "0",
-  "aria-valuemax": "80",
-  style: {
-    "width": "80%"
-  }
-})])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn btn-link text-secondary mb-0",
-  "aria-haspopup": "true",
-  "aria-expanded": "false"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-ellipsis-v text-xs"
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex px-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "/img/small-logos/logo-xd.svg",
-  "class": "avatar avatar-sm rounded-circle me-2"
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "my-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", {
-  "class": "mb-0 text-sm"
-}, "Adobe XD")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "text-sm font-weight-bold mb-0"
-}, "$2,300")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "text-xs font-weight-bold"
-}, "done")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "d-flex align-items-center justify-content-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
-  "class": "me-2 text-xs font-weight-bold"
-}, "100%"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "progress-bar bg-gradient-success",
-  role: "progressbar",
-  "aria-valuenow": "100",
-  "aria-valuemin": "0",
-  "aria-valuemax": "100",
-  style: {
-    "width": "100%"
-  }
-})])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", {
-  "class": "align-middle"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn btn-link text-secondary mb-0",
-  "aria-haspopup": "true",
-  "aria-expanded": "false"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
   "class": "fa fa-ellipsis-v text-xs"
 })])])])])])])])])])], -1

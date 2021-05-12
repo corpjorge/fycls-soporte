@@ -27,7 +27,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="nav-link-text ms-1">Dashboard</span>
+                        <span class="nav-link-text ms-1">Solicitudes</span>
                     </router-link>
                 </li>
                 <li class="nav-item mt-3">

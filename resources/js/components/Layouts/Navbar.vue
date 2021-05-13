@@ -2,7 +2,7 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" navbar-scroll="true">
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
-                <h6 class="font-weight-bolder mb-0">Tables</h6>
+                <h6 class="font-weight-bolder mb-0">{{ $route.name }}</h6>
             </nav>
             <div class="navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar" style="flex-flow: row-reverse;">
                 <ul class="navbar-nav  justify-content-end" style="flex-flow: row;">

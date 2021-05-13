@@ -16937,33 +16937,30 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "container-fluid py-1 px-3"
 };
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("nav", {
+var _hoisted_3 = {
   "aria-label": "breadcrumb"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", {
-  "class": "font-weight-bolder mb-0"
-}, "Tables")], -1
-/* HOISTED */
-);
-
+};
 var _hoisted_4 = {
+  "class": "font-weight-bolder mb-0"
+};
+var _hoisted_5 = {
   "class": "navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4",
   id: "navbar",
   style: {
     "flex-flow": "row-reverse"
   }
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "navbar-nav  justify-content-end",
   style: {
     "flex-flow": "row"
   }
 };
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "nav-item  ps-3 d-flex align-items-center"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "sidenav-toggler-inner"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
   "class": "fas fa-bars"
@@ -16971,7 +16968,7 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", {
   "class": "nav-item px-3 d-flex align-items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
   href: "javascript:;",
@@ -16982,7 +16979,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", {
   "class": "nav-item dropdown pe-2 d-flex align-items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
   href: "javascript:;",
@@ -17091,11 +17088,11 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_10 = {
+var _hoisted_11 = {
   "class": "nav-item d-flex align-items-center"
 };
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "d-sm-inline d-none"
 }, "Salir", -1
 /* HOISTED */
@@ -17104,13 +17101,15 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("nav", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$route.name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
     onClick: _cache[1] || (_cache[1] = function () {
       return $options.toggleSidenav && $options.toggleSidenav.apply($options, arguments);
     }),
     "class": "nav-link text-body p-0",
     id: "iconNavbarSidenav"
-  }, [_hoisted_7])]), _hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  }, [_hoisted_8])]), _hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
     style: {
       "cursor": "pointer"
     },
@@ -17118,7 +17117,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       return $options.logout && $options.logout.apply($options, arguments);
     }),
     "class": "nav-link text-body font-weight-bold px-0"
-  }, [_hoisted_11])])])])])]);
+  }, [_hoisted_12])])])])])]);
 });
 
 /***/ }),
@@ -17574,19 +17573,18 @@ __webpack_require__.r(__webpack_exports__);
   },
   meta: {
     requiresAuth: true,
-    type: 3
+    type: 2
+  }
+}, {
+  path: '/workplace/:id',
+  name: 'Entity',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_views_workplace_Entity_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/workplace/Entity */ "./resources/js/views/workplace/Entity.vue"));
   },
-  children: [{
-    path: 'inventory',
-    name: 'Inventory',
-    component: function component() {
-      return __webpack_require__.e(/*! import() */ "resources_js_views_workplace_Inventory_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/workplace/Inventory */ "./resources/js/views/workplace/Inventory.vue"));
-    },
-    meta: {
-      requiresAuth: true,
-      type: 3
-    }
-  }]
+  meta: {
+    requiresAuth: true,
+    type: 2
+  }
 }]);
 
 /***/ }),
@@ -24236,7 +24234,7 @@ var index = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Home_vue":1,"resources_js_views_workplace_Workplace_vue":1,"resources_js_views_workplace_Inventory_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Home_vue":1,"resources_js_views_workplace_Workplace_vue":1,"resources_js_views_workplace_Entity_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

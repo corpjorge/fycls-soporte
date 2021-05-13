@@ -22,14 +22,16 @@
                                             <img :src="'/img/logos/'+workplace.domain+'.png'" class="avatar avatar-sm rounded-circle me-2">
                                         </div>
                                         <div class="my-auto">
-                                            <h6 class="mb-0 text-sm">{{ workplace.domain }}</h6>
+                                            <router-link :to="{ name: 'Entity', params: { id: workplace.id } }">
+                                                <h6 class="mb-0 text-sm">{{ workplace.domain }}</h6>
+                                            </router-link>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button class="btn btn-link text-secondary mb-0">
+                                    <router-link :to="{ name: 'Entity', params: { id: workplace.id } }" class="btn btn-link text-secondary mb-0">
                                         <i class="fas fa-angle-right text-xl"></i>
-                                    </button>
+                                    </router-link>
                                 </td>
                             </tr>
                             </tbody>

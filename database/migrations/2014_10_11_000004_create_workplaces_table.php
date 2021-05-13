@@ -17,6 +17,7 @@ class CreateWorkplacesTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('domain')->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

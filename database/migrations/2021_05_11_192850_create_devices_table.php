@@ -15,6 +15,7 @@ class CreateDevicesTable extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('workplace_id')->constrained();
             $table->string('type')->index();
             $table->string('name');
             $table->string('brand');

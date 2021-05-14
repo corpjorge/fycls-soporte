@@ -6,6 +6,20 @@
             </div>
         </div>
     </div>
+
+    <div class="card mt-4">
+        <div class="card-header pb-0 p-3">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <h6 class="mb-0">Payment Method</h6>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add New Card</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </template>
 
 <script>

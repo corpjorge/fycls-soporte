@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {  return view('welcome'); });
 
 Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
+Route::get('/workplace/{id}', [WorkplaceController::class, 'workplace']);
 Route::get('/products', [WorkplaceController::class, 'productsWorkplace']);
+Route::get('/user/{id}', [UserController::class, 'user']);
 
 Route::get('workplace/{id}/devices', [DeviceController::class, 'DevicesWorkplace']);
 Route::get('workplace/{id}/products', [ProductController::class, 'productsWorkplace']);
-Route::get('workplace/{id}/users', [UserController::class, 'DevicesWorkplace']);
+Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);
 
 Route::get('workplace/{id}/devices/total', [DeviceController::class, 'devicesWorkplaceTotal']);
 Route::get('workplace/{id}/products/total', [ProductController::class, 'productsWorkplaceTotal']);

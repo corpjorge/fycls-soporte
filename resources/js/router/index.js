@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import workplace from "./workplace";
+import user from "./user"
 
 const routes = [
     {
@@ -9,6 +10,7 @@ const routes = [
         meta: { requiresAuth: true }
     },
     ...workplace,
+    ...user,
 ]
 
 const router = createRouter({

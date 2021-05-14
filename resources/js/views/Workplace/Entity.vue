@@ -9,7 +9,9 @@
                                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Usuarios</p>
                                 <h5 class="font-weight-bolder mb-0">
                                     {{ totalUsers }}
-                                    <span class="text-success text-sm font-weight-bolder">ver</span>
+                                    <router-link :to="{ name: 'Users', params: { id: $route.params.id}}">
+                                        <span class="text-success text-sm font-weight-bolder">ver</span>
+                                    </router-link>
                                 </h5>
                             </div>
                         </div>
@@ -31,7 +33,9 @@
                                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Equipos</p>
                                 <h5 class="font-weight-bolder mb-0">
                                     {{ totalDevices }}
-                                    <span class="text-success text-sm font-weight-bolder">ver</span>
+                                    <router-link :to="{ name: 'Devices', params: { id: $route.params.id}}">
+                                        <span class="text-success text-sm font-weight-bolder">ver</span>
+                                    </router-link>
                                 </h5>
                             </div>
                         </div>
@@ -53,7 +57,9 @@
                                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Otros</p>
                                 <h5 class="font-weight-bolder mb-0">
                                     {{ totalProducts }}
-                                    <span class="text-success text-sm font-weight-bolder">ver</span>
+                                    <router-link :to="{ name: 'Products', params: { id: $route.params.id}}">
+                                        <span class="text-success text-sm font-weight-bolder">ver</span>
+                                    </router-link>
                                 </h5>
                             </div>
                         </div>
@@ -63,6 +69,20 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card card-body blur shadow-blur my-4">
+        <div class="row gx-4">
+            <div class="col-auto my-auto">
+                <div class="h-100">
+                    <h5 class="mb-1">
+                        {{ workplace.name }}
+                    </h5>
+                    <p class="mb-0 font-weight-bold text-sm">
+                        {{ workplace.domain }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -80,12 +100,14 @@ export default {
             totalUsers: null,
             totalDevices: null,
             totalProducts: null,
+            workplace: {}
         }
     },
     mounted() {
         this.getTotalUsers();
         this.getTotalDevices();
         this.getTotalProducts();
+        this.getWorkplace();
     },
     methods: {
         async getTotalUsers() {
@@ -96,8 +118,12 @@ export default {
         },
         async getTotalProducts() {
             await axios.get('workplace/'+this.$route.params.id+'/products/total').then(response => { this.totalProducts = response.data })
+        },
+        async getWorkplace() {
+            await axios.get('workplace/'+this.$route.params.id).then(response => { this.workplace = response.data })
         }
-    }
+    },
+
 }
 </script>
 

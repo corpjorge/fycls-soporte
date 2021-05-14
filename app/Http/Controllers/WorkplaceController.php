@@ -11,4 +11,9 @@ class WorkplaceController extends Controller
     {
         return Workplace::all();
     }
+
+    public function workplace($id)
+    {
+        return Workplace::find($id);
+    }
 }

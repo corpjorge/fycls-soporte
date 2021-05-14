@@ -16,4 +16,5 @@ class DeviceController extends Controller
     {
         return Device::where('workplace_id',$id)->count();
     }
+
 }

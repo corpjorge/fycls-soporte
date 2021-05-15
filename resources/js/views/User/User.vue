@@ -1,55 +1,99 @@
 <template>
-    <div class="card card-body blur shadow-blur my-4">
-        <div class="row gx-4">
-            <div class="col-auto my-auto">
-                <div class="card-header pb-0 p-3" data-v-a7feaa40=""><div class="row" data-v-a7feaa40=""><div class="col-md-3 d-flex align-items-center" data-v-a7feaa40=""><h6 class="mb-0" data-v-a7feaa40="">Usuarios</h6></div><div class="col-md-3 d-flex align-items-center" data-v-a7feaa40=""></div><div class="col-md-3 text-right ms-md-auto pe-md-3 d-flex align-items-end" data-v-a7feaa40=""><div class="input-group" data-v-a7feaa40=""><span class="input-group-text text-body" data-v-a7feaa40=""><i class="fas fa-search" aria-hidden="true" data-v-a7feaa40=""></i></span><input type="text" class="form-control" placeholder="Buscar..." data-v-a7feaa40=""></div></div><div class="col-md-3 text-right" data-v-a7feaa40=""><button class="btn bg-gradient-dark mb-0" href="javascript:;" data-v-a7feaa40=""><i class="fas fa-plus" aria-hidden="true" data-v-a7feaa40=""></i>&nbsp;&nbsp;Añadir usuario</button></div></div></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card mt-4">
+    <div class="card card-body blur shadow-blur mt-4">
         <div class="card-header pb-0 p-3">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
-                    <h6 class="mb-0">Payment Method</h6>
+                    <h6 class="mb-0">{{ user.name }}</h6>
                 </div>
                 <div class="col-md-6 text-right">
-                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add New Card</a>
+                    <button @click="showFormEdit" type="button" class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#editUserModal"><i class="fas fa-pen"></i>&nbsp;&nbsp;Editar</button>
                 </div>
+
+                <form v-if="show" @submit.prevent="updateUser" class="row g-3">
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" v-model="user.name" >
+                        <small style="color: red">{{ errors.name ? errors.name[0] : ''}}</small>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" v-model="user.email" >
+                        <small style="color: red">{{ errors.email ? errors.email[0] : ''}}</small>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="phone" class="form-label">Celular</label>
+                        <input type="number" class="form-control" id="phone" v-model="user.phone" >
+                        <small style="color: red">{{ errors.phone ? errors.phone[0] : ''}}</small>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="zone" class="form-label">Zona</label>
+                        <input type="text" class="form-control" id="zone" v-model="user.zone" placeholder="Zona norte" >
+                        <small style="color: red">{{ errors.zone ? errors.zone[0] : ''}}</small>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="area" class="form-label">Area</label>
+                        <input type="text" class="form-control" id="area" v-model="user.area" placeholder="Contabilidad" >
+                        <small style="color: red">{{ errors.area ? errors.area[0] : ''}}</small>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="role_id" class="form-label">Rol</label>
+                        <select class="form-select" id="role_id" v-model="user.role_id">
+                            <option value="1">Administrador</option>
+                            <option value="2">Técnico</option>
+                            <option value="3">Coordinador</option>
+                            <option value="4">Usuario</option>
+                        </select>
+                        <small style="color: red">{{ errors.area ? errors.area[0] : ''}}</small>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Actualizar</button>
+                    </div>
+                </form>
             </div>
         </div>
-
     </div>
+    <Device/>
+    <Service/>
 </template>
 
 <script>
 import axios from "axios";
+import Device from "./Device";
+import Service from "./Service";
 
 export default {
     name: "User",
+    components: {Service, Device},
     data(){
         return {
             user: {},
-            device: null,
-            service: null
+            service: null,
+            show: null,
+            errors: {}
         }
     },
     mounted() {
         this.getUser();
-        //this.deviceCurrent();
-        //this.serviceCurrent();
     },
     methods: {
         async getUser() {
             await axios.get('/user/'+this.$route.params.id).then(response => { this.user = response.data })
         },
-        async deviceCurrent() {
-            //await axios.get('').then()
+        showFormEdit() {
+            if (!this.show){
+                return this.show = true
+            }
+            this.show = null
         },
-        async serviceCurrent() {
-            //await axios.get('').then()
+        async updateUser() {
+            await axios.put('/user/'+this.$route.params.id, this.user).then().catch(error => { this.errors = error.response.data.errors; })
         }
-
     }
 }
 </script>

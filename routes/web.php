@@ -12,6 +12,8 @@ Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
 Route::get('/workplace/{id}', [WorkplaceController::class, 'workplace']);
 Route::get('/products', [WorkplaceController::class, 'productsWorkplace']);
 Route::get('/user/{id}', [UserController::class, 'user']);
+Route::put('/user/{user}', [UserController::class, 'update']);
+
 
 Route::get('workplace/{id}/devices', [DeviceController::class, 'DevicesWorkplace']);
 Route::get('workplace/{id}/products', [ProductController::class, 'productsWorkplace']);

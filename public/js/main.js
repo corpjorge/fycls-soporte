@@ -17739,7 +17739,12 @@ var routes = [{
 }].concat(_toConsumableArray(_workplace__WEBPACK_IMPORTED_MODULE_0__.default), _toConsumableArray(_user__WEBPACK_IMPORTED_MODULE_1__.default));
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createWebHashHistory)(process.env.BASE_URL),
-  routes: routes
+  routes: routes,
+  scrollBehavior: function scrollBehavior() {
+    return {
+      top: 0
+    };
+  }
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
 

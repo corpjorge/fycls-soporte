@@ -19,7 +19,7 @@ class UserController extends Controller
 
     public function user($id)
     {
-        return User::find($id);
+        return User::find($id)->load('devices')->load('services');
     }
 
     public function update(Request $request, User $user)

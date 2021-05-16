@@ -10,6 +10,11 @@
                 </div>
 
                 <form v-if="show" @submit.prevent="updateUser" class="row g-3">
+                    <div v-if="success" style="color: white;" class="alert alert-success alert-dismissible fade show" role="alert">
+                        Datos actualizados
+                        <button @click="hidden" type="button" class="btn-close"></button>
+                    </div>
+
                     <div class="col-md-4">
                         <label for="name" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="name" v-model="user.name" >
@@ -75,7 +80,8 @@ export default {
             user: {},
             service: null,
             show: null,
-            errors: {}
+            errors: {},
+            success: null
         }
     },
     mounted() {
@@ -92,7 +98,11 @@ export default {
             this.show = null
         },
         async updateUser() {
-            await axios.put('/user/'+this.$route.params.id, this.user).then().catch(error => { this.errors = error.response.data.errors; })
+            this.success = null;
+            await axios.put('/user/'+this.$route.params.id, this.user).then(() => this.success = true ).catch(error => { this.errors = error.response.data.errors; })
+        },
+        hidden() {
+            this.success = null;
         }
     }
 }

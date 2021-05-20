@@ -17697,6 +17697,52 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/router/device.js":
+/*!***************************************!*\
+  !*** ./resources/js/router/device.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
+  path: '/device/:id',
+  name: 'Device',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_views_User_user_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/User/user */ "./resources/js/views/User/user.vue"));
+  },
+  meta: {
+    requiresAuth: true,
+    type: 2
+  },
+  children: [{
+    path: '/device/:id/users',
+    name: 'Devices-users',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_User_Devices_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/User/Devices */ "./resources/js/views/User/Devices.vue"));
+    },
+    meta: {
+      requiresAuth: true,
+      type: 2
+    }
+  }, {
+    path: '/device/:id/services',
+    name: 'Device-Services',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_User_Services_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/User/Services */ "./resources/js/views/User/Services.vue"));
+    },
+    meta: {
+      requiresAuth: true,
+      type: 2
+    }
+  }]
+}]);
+
+/***/ }),
+
 /***/ "./resources/js/router/index.js":
 /*!**************************************!*\
   !*** ./resources/js/router/index.js ***!
@@ -17708,9 +17754,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 /* harmony import */ var _workplace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./workplace */ "./resources/js/router/workplace.js");
 /* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user */ "./resources/js/router/user.js");
+/* harmony import */ var _device__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./device */ "./resources/js/router/device.js");
 /* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -17727,6 +17774,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
+
 var routes = [{
   path: '/',
   name: 'Home',
@@ -17736,9 +17784,9 @@ var routes = [{
   meta: {
     requiresAuth: true
   }
-}].concat(_toConsumableArray(_workplace__WEBPACK_IMPORTED_MODULE_0__.default), _toConsumableArray(_user__WEBPACK_IMPORTED_MODULE_1__.default));
-var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createRouter)({
-  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createWebHashHistory)(process.env.BASE_URL),
+}].concat(_toConsumableArray(_workplace__WEBPACK_IMPORTED_MODULE_0__.default), _toConsumableArray(_user__WEBPACK_IMPORTED_MODULE_1__.default), _toConsumableArray(_device__WEBPACK_IMPORTED_MODULE_2__.default));
+var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_3__.createRouter)({
+  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_3__.createWebHashHistory)(process.env.BASE_URL),
   routes: routes,
   scrollBehavior: function scrollBehavior() {
     return {
@@ -17852,6 +17900,16 @@ __webpack_require__.r(__webpack_exports__);
     name: 'Products',
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_Workplace_Products_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Workplace/Products */ "./resources/js/views/Workplace/Products.vue"));
+    },
+    meta: {
+      requiresAuth: true,
+      type: 2
+    }
+  }, {
+    path: '/workplace/:id/create/device',
+    name: 'Add-Device',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_Workplace_Add_Device_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Workplace/Add/Device */ "./resources/js/views/Workplace/Add/Device.vue"));
     },
     meta: {
       requiresAuth: true,
@@ -24502,7 +24560,7 @@ var index = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Home_vue":1,"resources_js_views_Workplace_Workplace_vue":1,"resources_js_views_Workplace_Entity_vue":1,"resources_js_views_Workplace_Users_vue":1,"resources_js_views_Workplace_Devices_vue":1,"resources_js_views_Workplace_Products_vue":1,"resources_js_views_User_user_vue":1,"resources_js_views_User_Devices_vue":1,"resources_js_views_User_Services_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Home_vue":1,"resources_js_views_Workplace_Workplace_vue":1,"resources_js_views_Workplace_Entity_vue":1,"resources_js_views_Workplace_Users_vue":1,"resources_js_views_Workplace_Devices_vue":1,"resources_js_views_Workplace_Products_vue":1,"resources_js_views_Workplace_Add_Device_vue":1,"resources_js_views_User_user_vue":1,"resources_js_views_User_Devices_vue":1,"resources_js_views_User_Services_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

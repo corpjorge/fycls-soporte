@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import workplace from "./workplace";
 import user from "./user"
+import Device from "./device"
 
 const routes = [
     {
@@ -11,6 +12,7 @@ const routes = [
     },
     ...workplace,
     ...user,
+    ...Device,
 ]
 
 const router = createRouter({

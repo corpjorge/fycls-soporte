@@ -29,6 +29,12 @@ export default [
                 component: () => import('../views/Workplace/Products'),
                 meta: { requiresAuth: true, type: 2 },
             },
+            {
+                path: '/workplace/:id/create/device',
+                name: 'Add-Device',
+                component: () => import('../views/Workplace/Add/Device'),
+                meta: { requiresAuth: true, type: 2 },
+            },
         ]
     },
 ]

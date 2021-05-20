@@ -47,7 +47,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function devices(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(Device::class, 'device_user');
+        return $this->belongsToMany(Device::class, 'assigned');
     }
 
     public function services(): \Illuminate\Database\Eloquent\Relations\HasMany

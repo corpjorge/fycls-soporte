@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDeviceUserTable extends Migration
+class CreateAssignedTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDeviceUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('device_user', function (Blueprint $table) {
+        Schema::create('assigned', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('device_id')->constrained();

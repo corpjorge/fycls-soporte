@@ -11,6 +11,6 @@ class Device extends Model
 
     public function users(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'device_user');
+        return $this->belongsToMany(User::class, 'assigned');
     }
 }

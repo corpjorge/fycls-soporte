@@ -15,6 +15,7 @@ class CreatePublicationsTable extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('workplace_id')->constrained();
             $table->string('media');
             $table->string('public');
             $table->text('achievement')->nullable();

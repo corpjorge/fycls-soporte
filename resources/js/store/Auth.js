@@ -3,10 +3,8 @@ import axios from "axios";
 export default {
     namespaced: true,
     state: {
-        user: null,
+        user: {},
         auth: false,
-        token: localStorage.getItem('user') || null,
-        type: localStorage.getItem('type') || null,
     },
     mutations: {
         SET_USER(state, user) {
@@ -18,7 +16,6 @@ export default {
         getUser({commit } ) {
             axios.get('/me').then(res =>{
                 commit('SET_USER', res.data);
-                localStorage.setItem('type', res.data.type.id);
             }).catch(()=>{
                 // console.clear()
                 localStorage.clear()
@@ -28,7 +25,7 @@ export default {
     },
     getters: {
          loggedIn(state) {
-           return state.token !== null
+           return state.user !== null
         },
     }
 }

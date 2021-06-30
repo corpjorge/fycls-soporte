@@ -130,6 +130,7 @@ export default {
         },
         async logout() {
             await axios.post('/logout')
+            localStorage.clear();
             await window.location.assign("/")
         }
     }

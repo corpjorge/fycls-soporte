@@ -3,6 +3,7 @@ import workplace from "./workplace";
 import user from "./user"
 import Device from "./device"
 import Publications from "./Publications"
+import store from '../store';
 
 const routes = [
     {
@@ -23,6 +24,18 @@ const router = createRouter({
     scrollBehavior() {
         return { top: 0 }
     },
+})
+
+router.beforeEach((to) => {
+
+    store.dispatch('Auth/getUser')
+    const type = localStorage.getItem("type");
+
+    if (to.meta.type < type ) {
+        return {
+            name: 'Home'
+        }
+    }
 })
 
 export default router

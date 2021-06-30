@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Publication extends Model
 {
     use HasFactory;
+
+    protected $fillable= [
+        'workplace_id',
+        'type',
+        'media',
+        'public',
+        'achievement',
+        'message',
+        'information',
+        'description',
+        'date',
+        'state',
+    ];
+
+    protected $casts = [
+        'media' => 'array',
+    ];
+
 }

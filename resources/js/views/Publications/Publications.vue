@@ -27,6 +27,7 @@
                         <table class="table align-items-center justify-content-center mb-0">
                             <thead>
                             <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tipo</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
                                 <th v-if="$store.state.Auth.user.type === 1" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ver</th>
@@ -34,6 +35,15 @@
                             </thead>
                             <tbody>
                             <tr v-for="publication in publications" :key="publications.id" >
+                                <td>
+                                    <div class="d-flex px-2">
+                                        <div class="my-auto">
+
+                                            <h6 class="mb-0 text-sm">{{ publication.id }}</h6>
+
+                                        </div>
+                                    </div>
+                                </td>
                                 <td>
                                     <div class="d-flex px-2">
                                         <div class="my-auto">

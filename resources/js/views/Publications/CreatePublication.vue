@@ -83,6 +83,12 @@
             <small style="color: red">{{ errors.public ? errors.public[0] : ''}}</small>
         </div>
 
+        <div class="col-md-4">
+            <label for="description" class="form-label">Cargar documento  </label>
+            <input class="form-control" id="date" type="file"    >
+            <small style="color: red">{{ errors.public ? errors.public[0] : ''}}</small>
+        </div>
+
         <div class="col-12">
             <button class="btn bg-gradient-info btn-lg w-100" type="submit">Solicitar publicación</button>
         </div>

@@ -72,20 +72,20 @@
         </div>
 
         <div class="col-md-4">
-            <label for="achievement" class="form-label">¿A qué publico va dirigido?</label>
-            <input type="text" class="form-control" id="achievement" v-model="publication.public">
-            <small style="color: red">{{ errors.achievement ? errors.achievement[0] : ''}}</small>
-        </div>
-
-        <div class="col-md-4">
-            <label for="description" class="form-label">Fecha de publicación  </label>
-            <input class="form-control" id="date" type="date" v-model="publication.date"  >
+            <label for="public" class="form-label">¿A qué publico va dirigido?</label>
+            <input type="text" class="form-control" id="public" v-model="publication.public">
             <small style="color: red">{{ errors.public ? errors.public[0] : ''}}</small>
         </div>
 
         <div class="col-md-4">
-            <label for="description" class="form-label">Cargar documento  </label>
-            <input class="form-control" id="date" type="file"    >
+            <label for="date" class="form-label">Fecha de publicación  </label>
+            <input class="form-control" id="date" type="datetime-local" v-model="publication.date"  >
+            <small style="color: red">{{ errors.date ? errors.date[0] : ''}}</small>
+        </div>
+
+        <div class="col-md-4">
+            <label for="file" class="form-label">Cargar documento  </label>
+            <input @change="file" class="form-control" id="file" type="file"  >
             <small style="color: red">{{ errors.public ? errors.public[0] : ''}}</small>
         </div>
 
@@ -110,13 +110,30 @@ export default {
         }
     },
     methods: {
+        file(event) {
+            this.publication.file = event.target.files[0];
+        },
         createPublication() {
-            axios.post('publications/create', this.publication )
+
+            const data = new FormData();
+
+            data.append('type',    this.publication.type ? this.publication.type : '')
+            data.append('achievement',    this.publication.achievement ? this.publication.achievement : '')
+            data.append('message',    this.publication.message ? this.publication.message : '')
+            data.append('information',    this.publication.information ? this.publication.information : '')
+            data.append('description',    this.publication.description ? this.publication.description : '')
+            data.append('media',    this.publication.media ? this.publication.media : '')
+            data.append('public',    this.publication.public ? this.publication.public : '')
+            data.append('date',    this.publication.date ? this.publication.date : '')
+            data.append('file',    this.publication.file ? this.publication.file : '')
+
+            axios.post('publications/create', data )
                 .then(() => {
                     this.success = true;
                     this.publication =  { media: [] }
                     this.errors = {}
                 }).catch(error => { console.log(error) })
+
         }
     }
 }

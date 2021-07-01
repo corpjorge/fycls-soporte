@@ -23,7 +23,9 @@ class CreatePublicationsTable extends Migration
             $table->text('message');
             $table->text('information')->nullable();;
             $table->text('description')->nullable();;
-            $table->date('date')->nullable();
+            $table->string('quantity')->nullable();
+            $table->dateTime('date')->nullable();
+            $table->string('file')->nullable();
             $table->integer('state')->nullable();
             $table->timestamps();
         });

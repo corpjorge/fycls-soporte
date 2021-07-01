@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Publication;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
+
 
 class PublicationController extends Controller
 {
@@ -18,8 +21,13 @@ class PublicationController extends Controller
 
     public function create(Request $request, Publication $publication)
     {
+        $archivo = $request->file('file')->getClientOriginalName();
+        $archivo = \Str::random(3) . $archivo;
+        Storage::putFileAs('public/publications', new File($request->file), $archivo);
+
         $publication->fill($request->all());
         $publication->workplace_id = 1;
+        $publication->file = $archivo ?? null;
         $publication->state = 0;
         $publication->save();
     }

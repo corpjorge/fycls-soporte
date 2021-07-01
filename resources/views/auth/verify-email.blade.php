@@ -74,20 +74,20 @@
             <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                 <div class="card z-index-0">
                     <div class="card-header text-center pt-4">
-                        <h5>¡Se te ha enviado un enlace de verificación por correo electrónico! </h5>
+                        <h5>Debes validar tu correo electrónico </h5>
                     </div>
                     <div class="card-body">
 
                         @if (session('status') == 'verification-link-sent')
                             <div class="alert alert-info" role="alert" style="color: white">
-                                ¡Se le ha enviado un nuevo enlace de verificación por correo electrónico!
+                                ¡Se le ha enviado un enlace de verificación por correo electrónico!
                             </div>
                         @endif
 
                         <form role="form text-left" method="post" action="{{ url('/email/verification-notification') }}" autocomplete="off">
                             @csrf
                             <div class="text-center">
-                                <button type="submit" class="btn bg-gradient-dark w-100 my-2 mb-2">Volver a reenviar</button>
+                                <button type="submit" class="btn bg-gradient-dark w-100 my-2 mb-2">Clic para enviar correo de verificación</button>
                             </div>
                             <p class="text-sm mt-3 mb-0">¿No tienes una cuenta?: <a href="{{ route('register') }}" class="text-dark font-weight-bolder">Registrarse</a></p>
                         </form>

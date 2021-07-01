@@ -26,10 +26,23 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    file: function file(event) {
+      this.publication.file = event.target.files[0];
+    },
     createPublication: function createPublication() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('publications/create', this.publication).then(function () {
+      var data = new FormData();
+      data.append('type', this.publication.type ? this.publication.type : '');
+      data.append('achievement', this.publication.achievement ? this.publication.achievement : '');
+      data.append('message', this.publication.message ? this.publication.message : '');
+      data.append('information', this.publication.information ? this.publication.information : '');
+      data.append('description', this.publication.description ? this.publication.description : '');
+      data.append('media', this.publication.media ? this.publication.media : '');
+      data.append('public', this.publication["public"] ? this.publication["public"] : '');
+      data.append('date', this.publication.date ? this.publication.date : '');
+      data.append('file', this.publication.file ? this.publication.file : '');
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('publications/create', data).then(function () {
         _this.success = true;
         _this.publication = {
           media: []
@@ -332,7 +345,7 @@ var _hoisted_38 = {
 };
 
 var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "for": "achievement",
+  "for": "public",
   "class": "form-label"
 }, "¿A qué publico va dirigido?", -1
 /* HOISTED */
@@ -348,7 +361,7 @@ var _hoisted_41 = {
 };
 
 var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "for": "description",
+  "for": "date",
   "class": "form-label"
 }, "Fecha de publicación ", -1
 /* HOISTED */
@@ -364,27 +377,19 @@ var _hoisted_44 = {
 };
 
 var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "for": "description",
+  "for": "file",
   "class": "form-label"
 }, "Cargar documento ", -1
 /* HOISTED */
 );
 
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-  "class": "form-control",
-  id: "date",
-  type: "file"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_47 = {
+var _hoisted_46 = {
   style: {
     "color": "red"
   }
 };
 
-var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "col-12"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   "class": "btn bg-gradient-info btn-lg w-100",
@@ -397,7 +402,7 @@ var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("form", {
-    onSubmit: _cache[15] || (_cache[15] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[16] || (_cache[16] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.createPublication && $options.createPublication.apply($options, arguments);
     }, ["prevent"])),
     "class": "row g-3"
@@ -527,28 +532,37 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     type: "text",
     "class": "form-control",
-    id: "achievement",
+    id: "public",
     "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
       return $data.publication["public"] = $event;
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.publication["public"]]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("small", _hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.achievement ? $data.errors.achievement[0] : ''), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.publication["public"]]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("small", _hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors["public"] ? $data.errors["public"][0] : ''), 1
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_41, [_hoisted_42, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     "class": "form-control",
     id: "date",
-    type: "date",
+    type: "datetime-local",
     "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
       return $data.publication.date = $event;
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.publication.date]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("small", _hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors["public"] ? $data.errors["public"][0] : ''), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.publication.date]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("small", _hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.date ? $data.errors.date[0] : ''), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_44, [_hoisted_45, _hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("small", _hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors["public"] ? $data.errors["public"][0] : ''), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_44, [_hoisted_45, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+    onChange: _cache[15] || (_cache[15] = function () {
+      return $options.file && $options.file.apply($options, arguments);
+    }),
+    "class": "form-control",
+    id: "file",
+    type: "file"
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("small", _hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors["public"] ? $data.errors["public"][0] : ''), 1
   /* TEXT */
-  )]), _hoisted_48], 32
+  )]), _hoisted_47], 32
   /* HYDRATE_EVENTS */
   );
 });

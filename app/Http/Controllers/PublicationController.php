@@ -14,13 +14,27 @@ class PublicationController extends Controller
         } else {
             return $publication->where('workplace_id', auth()->user()->workplace_id)->orderBy('id', 'desc')->get();
         }
-
     }
 
     public function create(Request $request, Publication $publication)
     {
         $publication->fill($request->all());
         $publication->workplace_id = 1;
+        $publication->state = 0;
         $publication->save();
     }
+
+    public function publication(Publication $publication, $id)
+    {
+        return $publication->find($id);
+    }
+
+    public function update(Request $request, $id)
+    {
+          $publication = Publication::find($id);
+          $publication->state = $request->state;
+          $publication->save();
+    }
+
+
 }

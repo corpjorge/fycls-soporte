@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('publications', [PublicationController::class, 'list']);
     Route::post('publications/create', [PublicationController::class, 'create']);
+    Route::get('publication/{id}', [PublicationController::class, 'publication']);
+    Route::post('publication/{id}', [PublicationController::class, 'update']);
 
     Route::get('/home', function () {  return view('home');  })->middleware(['verified']);
 });

@@ -5,6 +5,7 @@ export default {
     state: {
         user: {},
         auth: false,
+        type: localStorage.getItem('type') || null,
     },
     mutations: {
         SET_USER(state, user) {
@@ -16,6 +17,7 @@ export default {
         getUser({commit } ) {
             axios.get('/me').then(res =>{
                 commit('SET_USER', res.data);
+                localStorage.setItem('type', res.data.type);
             }).catch(()=>{
                 // console.clear()
                 localStorage.clear()

@@ -17721,7 +17721,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   meta: {
     requiresAuth: true,
-    type: 2
+    type: 4
+  }
+}, {
+  path: '/publications/:id',
+  name: 'Publication',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_views_Publications_Publication_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Publications/Publication */ "./resources/js/views/Publications/Publication.vue"));
+  },
+  meta: {
+    requiresAuth: true,
+    type: 4
   }
 }]);
 
@@ -17982,7 +17992,8 @@ __webpack_require__.r(__webpack_exports__);
   namespaced: true,
   state: {
     user: {},
-    auth: false
+    auth: false,
+    type: localStorage.getItem('type') || null
   },
   mutations: {
     SET_USER: function SET_USER(state, user) {
@@ -17995,6 +18006,7 @@ __webpack_require__.r(__webpack_exports__);
       var commit = _ref.commit;
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/me').then(function (res) {
         commit('SET_USER', res.data);
+        localStorage.setItem('type', res.data.type);
       })["catch"](function () {
         // console.clear()
         localStorage.clear();
@@ -24652,7 +24664,7 @@ var index = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Home_vue":1,"resources_js_views_Workplace_Workplace_vue":1,"resources_js_views_Workplace_Entity_vue":1,"resources_js_views_Workplace_Users_vue":1,"resources_js_views_Workplace_Devices_vue":1,"resources_js_views_Workplace_Products_vue":1,"resources_js_views_Workplace_Add_Device_vue":1,"resources_js_views_User_user_vue":1,"resources_js_views_User_Devices_vue":1,"resources_js_views_User_Services_vue":1,"resources_js_views_Publications_Publications_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Home_vue":1,"resources_js_views_Workplace_Workplace_vue":1,"resources_js_views_Workplace_Entity_vue":1,"resources_js_views_Workplace_Users_vue":1,"resources_js_views_Workplace_Devices_vue":1,"resources_js_views_Workplace_Products_vue":1,"resources_js_views_Workplace_Add_Device_vue":1,"resources_js_views_User_user_vue":1,"resources_js_views_User_Devices_vue":1,"resources_js_views_User_Services_vue":1,"resources_js_views_Publications_Publications_vue":1,"resources_js_views_Publications_Publication_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

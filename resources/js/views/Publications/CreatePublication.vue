@@ -1,7 +1,7 @@
 <template>
     <form  @submit.prevent="createPublication" class="row g-3">
         <div v-if="success" style="color: white;" class="alert alert-success alert-dismissible fade show" role="alert">
-            Datos actualizados
+            Publicación creada
             <button @click="hidden" type="button" class="btn-close"></button>
         </div>
 

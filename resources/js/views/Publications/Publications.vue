@@ -29,7 +29,7 @@
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tipo</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ver</th>
+                                <th v-if="$store.state.Auth.user.type === 1" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ver</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,9 +37,9 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div class="my-auto">
-                                            <router-link :to="{ name: 'User', params: { id: publication.id } }">
+
                                                 <h6 class="mb-0 text-sm">{{ publication.type }}</h6>
-                                            </router-link>
+
                                         </div>
                                     </div>
                                 </td>
@@ -47,16 +47,19 @@
                                     <div class="d-flex px-2">
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">
-                                                <span v-if="publication.state" class="badge badge-sm bg-gradient-success">success</span>
-                                                <span v-else class="badge badge-sm bg-gradient-warning">Pendiente</span>
+                                                <span v-if="publication.state === 0" class="badge badge-sm bg-gradient-warning">Pendiente</span>
+                                                <span v-if="publication.state === 1" class="badge badge-sm bg-gradient-info">En proceso</span>
+                                                <span v-if="publication.state === 2" class="badge badge-sm bg-gradient-primary">Terminado</span>
+                                                <span v-if="publication.state === 3" class="badge badge-sm bg-gradient-success">Publicado</span>
+                                                <span v-if="publication.state === 4" class="badge badge-sm bg-gradient-secondary">Cerrado</span>
                                             </h6>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="align-middle">
-                                    <a  class="btn btn-link text-secondary mb-0">
+                                <td v-if="$store.state.Auth.user.type === 1" class="align-middle">
+                                    <router-link :to="{ name: 'Publication', params: { id: publication.id } }"  class="btn btn-link text-secondary mb-0">
                                         <i class="fas fa-angle-right text-xl"></i>
-                                    </a>
+                                    </router-link>
                                 </td>
                             </tr>
                             </tbody>

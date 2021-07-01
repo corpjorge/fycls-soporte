@@ -9,7 +9,12 @@ class PublicationController extends Controller
 {
     public function list(Publication $publication)
     {
-        return $publication->orderBy('id', 'desc')->get();
+        if (auth()->user()->role_id == 2 ) {
+            return $publication->orderBy('id', 'desc')->get();
+        } else {
+            return $publication->where('workplace_id', auth()->user()->workplace_id)->orderBy('id', 'desc')->get();
+        }
+
     }
 
     public function create(Request $request, Publication $publication)

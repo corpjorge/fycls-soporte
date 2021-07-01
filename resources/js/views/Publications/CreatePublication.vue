@@ -41,15 +41,33 @@
 
         <div class="col-md-4">
             <label class="form-label">Medios de publicación </label><br>
-            <input class="form-check-input" type="checkbox" value="Mensaje de texto" id="Mensaje de texto" v-model="publication.media" >
-            <label class="custom-control-label" for="Mensaje de texto">Mensaje de texto</label>
-            <br>
-            <input class="form-check-input" type="checkbox" value="Correo masivo" id="Correo masivo" v-model="publication.media" >
-            <label class="custom-control-label" for="Correo masivo">Correo masivo</label>
-            <br>
-            <input class="form-check-input" type="checkbox" value="Redes sociales" id="Redes sociales" v-model="publication.media">
-            <label class="custom-control-label" for="Redes sociales">Redes sociales</label>
-            <br>
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-check-input check" type="checkbox" value="Mensaje de texto" id="Mensaje de texto" v-model="publication.media" >
+                    <label class="custom-control-label" for="Mensaje de texto">Mensaje de texto</label>
+                    <br>
+                    <input class="form-check-input check" type="checkbox" value="Correo masivo" id="Correo masivo" v-model="publication.media" >
+                    <label class="custom-control-label" for="Correo masivo">Correo masivo</label>
+                    <br>
+                    <input class="form-check-input check" type="checkbox" value="Redes sociales" id="Redes sociales" v-model="publication.media">
+                    <label class="custom-control-label" for="Redes sociales">Redes sociales</label>
+                </div>
+                <div class="col-6">
+                    <input class="form-check-input check" type="checkbox" value="Pagina web" id="Pagina web" v-model="publication.media" >
+                    <label class="custom-control-label" for="Pagina web">Pagina web</label>
+                    <br>
+                    <input class="form-check-input check" type="checkbox" value="Televisor" id="Televisor" v-model="publication.media" >
+                    <label class="custom-control-label" for="Televisor">Televisor</label>
+                    <br>
+                    <input class="form-check-input check" type="checkbox" value="Impresion" id="Impresion" v-model="publication.media">
+                    <label class="custom-control-label" for="Impresion">Impresion</label>
+                </div>
+            </div>
+
+
             <small style="color: red">{{ errors.media ? errors.media[0] : ''}}</small>
         </div>
 
@@ -87,12 +105,23 @@ export default {
     },
     methods: {
         createPublication() {
-            axios.post('publications/create', this.publication ).then(() => { this.success = true }).catch(error => { console.log(error) })
+            axios.post('publications/create', this.publication )
+                .then(() => {
+                    this.success = true;
+                    this.publication =  { media: [] }
+                    this.errors = {}
+                }).catch(error => { console.log(error) })
         }
     }
 }
 </script>
 
 <style scoped>
+
+.check {
+    border-style: solid;
+    border-color: #1a1717;
+    border-radius: 1rem;
+}
 
 </style>

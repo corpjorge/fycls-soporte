@@ -31,7 +31,7 @@ class GlobalUserSeeder extends Seeder
             'role_id' => 1,
             'name' => 'John Freddy Moreno',
             'email' => 'john.moreno@fyclsingenieria.com',
-            'password' => Hash::make('12342wefdgsasdf@'),
+            'password' => Hash::make('admin'),
             'workplace_id' => 1,
             'created_at' => now(),
             'updated_at' => now()

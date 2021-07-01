@@ -18,11 +18,11 @@
 
             <hr class="horizontal dark">
             <div class="d-flex">
-                <button @click="updatePublication(0)" type="button" class="mt-2 me-2 btn bg-warning">Pendiente</button>
-                <button @click="updatePublication(1)" type="button" class="mt-2 me-2 btn bg-info">En proceso</button>
-                <button @click="updatePublication(2)" type="button" class="mt-2 me-2 btn bg-primary">Terminado</button>
-                <button @click="updatePublication(3)" type="button" class="mt-2 me-2 btn bg-success">Publicado</button>
-                <button @click="updatePublication(4)" type="button" class="mt-2 me-2 btn bg-secondary">Cerrado</button>
+                <button @click="updatePublication(0)" type="button" class="mt-2 me-2 btn bg-gradient-warning">Pendiente</button>
+                <button @click="updatePublication(1)" type="button" class="mt-2 me-2 btn bg-gradient-info">En proceso</button>
+                <button @click="updatePublication(2)" type="button" class="mt-2 me-2 btn bg-gradient-primary">Terminado</button>
+                <button @click="updatePublication(3)" type="button" class="mt-2 me-2 btn bg-gradient-success">Publicado</button>
+                <button @click="updatePublication(4)" type="button" class="mt-2 me-2 btn bg-gradient-secondary">Cerrado</button>
             </div>
         </div>
     </div>

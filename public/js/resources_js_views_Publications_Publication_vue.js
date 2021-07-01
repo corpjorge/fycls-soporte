@@ -193,31 +193,31 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       return $options.updatePublication(0);
     }),
     type: "button",
-    "class": "mt-2 me-2 btn bg-warning"
+    "class": "mt-2 me-2 btn bg-gradient-warning"
   }, "Pendiente"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $options.updatePublication(1);
     }),
     type: "button",
-    "class": "mt-2 me-2 btn bg-info"
+    "class": "mt-2 me-2 btn bg-gradient-info"
   }, "En proceso"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     onClick: _cache[3] || (_cache[3] = function ($event) {
       return $options.updatePublication(2);
     }),
     type: "button",
-    "class": "mt-2 me-2 btn bg-primary"
+    "class": "mt-2 me-2 btn bg-gradient-primary"
   }, "Terminado"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     onClick: _cache[4] || (_cache[4] = function ($event) {
       return $options.updatePublication(3);
     }),
     type: "button",
-    "class": "mt-2 me-2 btn bg-success"
+    "class": "mt-2 me-2 btn bg-gradient-success"
   }, "Publicado"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     onClick: _cache[5] || (_cache[5] = function ($event) {
       return $options.updatePublication(4);
     }),
     type: "button",
-    "class": "mt-2 me-2 btn bg-secondary"
+    "class": "mt-2 me-2 btn bg-gradient-secondary"
   }, "Cerrado")])])]);
 });
 

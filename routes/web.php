@@ -15,6 +15,7 @@ Route::get('/service', [ServiceController::class, 'index']);
 Route::post('/service', [ServiceController::class, 'create']);
 Route::get('/service/{service}/edit', [ServiceController::class, 'edit']);
 Route::put('/service/{service}', [ServiceController::class, 'update']);
+Route::put('/service/qualify/{service}', [ServiceController::class, 'qualify']);
 
 Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
 Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);

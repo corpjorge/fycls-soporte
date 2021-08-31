@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Service;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -31,6 +32,13 @@ class ServiceController extends Controller
         $service->solution = $request->solution;
         $service->observations = $request->observations;
         $service->closing_date = Carbon::now();
+        $service->token = Str::random(40);
+        return $service->save();
+    }
+
+    public function qualify(Request $request, Service $service): bool
+    {
+        $service->qualify = $request->qualify;
         return $service->save();
     }
 

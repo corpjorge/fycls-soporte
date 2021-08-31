@@ -9,140 +9,168 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-8 m-auto">
-                <div class="rating">
-                    <span class="rating__result"></span>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
+
+            <template v-if="$route.query.token === service.token" >
+                <div  v-if="!service.qualify" class="col-12 col-lg-8 m-auto">
+                    <h4>Calificar</h4>
+                    <div class="rating">
+                        <span class="rating__result"></span>
+                        <i class="rating__star far fa-star" id="star1" @click="qualify(1)"></i>
+                        <i class="rating__star far fa-star" id="star2" @click="qualify(2)"></i>
+                        <i class="rating__star far fa-star" id="star3" @click="qualify(3)"></i>
+                        <i class="rating__star far fa-star" id="star4" @click="qualify(4)"></i>
+                        <i class="rating__star far fa-star" id="star5" @click="qualify(5)"></i>
+                    </div>
                 </div>
-            </div>
+            </template>
 
             <template v-if="empty">
                 <div class="col-12 col-lg-8 m-auto">
                     <div class="multisteps-form__form" style="height: 327px;">
-                        <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
+                        <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active"
+                             data-animation="FadeIn">
                             <div class="multisteps-form__content">
-                                <h5>Error al obtener datos del servicio: <b style="color: #ff4f4f;"> {{ $route.params.id }} </b></h5>
+                                <h5>Error al obtener datos del servicio: <b style="color: #ff4f4f;"> {{
+                                        $route.params.id
+                                    }} </b></h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </template>
 
-            <template v-else >
+            <template v-else>
 
-            <div class="row">
-                <div class="col-12 col-lg-8 m-auto my-3">
-                    <div class="multisteps-form__form">
-                        <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
-                            <h5 class="font-weight-bolder mb-0">Servicio numero: {{ service.id }}</h5>
-                            <p class="mb-0 text-sm">Consulte la información</p>
-                            <div class="multisteps-form__content">
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Cliente: </label>
-                                        <label style="font-weight: 400;">
-                                            <template v-for="workplace in workplaces">
-                                                <template v-if="workplace.id === service.user.workplace_id" > {{ workplace.name }} </template>
-                                            </template>
-                                        </label>
+                <div class="row">
+                    <div class="col-12 col-lg-8 m-auto my-3">
+                        <div class="multisteps-form__form">
+                            <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active"
+                                 data-animation="FadeIn">
+                                <h5 class="font-weight-bolder mb-0">Servicio numero: {{ service.id }}</h5>
+                                <p class="mb-0 text-sm">Consulte la información</p>
+                                <div class="multisteps-form__content">
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Cliente: </label>
+                                            <label style="font-weight: 400;">
+                                                <template v-for="workplace in workplaces">
+                                                    <template v-if="workplace.id === service.user.workplace_id">
+                                                        {{ workplace.name }}
+                                                    </template>
+                                                </template>
+                                            </label>
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                            <label>Usuario</label>
+                                            <label style="font-weight: 400;"> {{ service.user.name }} </label>
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                        <label>Usuario</label>
-                                        <label style="font-weight: 400;"> {{ service.user.name }} </label>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Solicitud</label>
+                                            <label style="font-weight: 400;"> {{ service.reason }} </label>
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                            <label>Tipo de Atención</label>
+                                            <label style="font-weight: 400;"> {{ service.type_attention }} </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Solicitud</label>
-                                        <label style="font-weight: 400;"> {{ service.reason }} </label>
-                                    </div>
-                                    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                        <label>Tipo de Atención</label>
-                                        <label style="font-weight: 400;"> {{ service.type_attention }} </label>
-                                    </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Tipo de Servicio</label>
-                                        <label style="font-weight: 400;"> {{ service.type_service }} </label>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label>Fecha Solicitud</label>
-                                        <label style="font-weight: 400;"> {{ service.created_at }} </label>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Tipo de Servicio</label>
+                                            <label style="font-weight: 400;"> {{ service.type_service }} </label>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label>Fecha Solicitud</label>
+                                            <label style="font-weight: 400;"> {{ service.created_at }} </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div v-if="service.closing_date || close" class="col-12 col-lg-8 m-auto my-3">
-                    <div class="multisteps-form__form">
-                        <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
-                            <h5 class="font-weight-bolder mb-0">Servicio cerrado</h5>
-                            <p class="mb-0 text-sm">Información</p>
-                            <div class="multisteps-form__content">
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Fecha Atención: </label>
-                                        <label style="font-weight: 400;"> {{service.attention_date}} </label>
+                    <div v-if="service.closing_date || close" class="col-12 col-lg-8 m-auto my-3">
+                        <div class="multisteps-form__form">
+                            <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active"
+                                 data-animation="FadeIn">
+                                <h5 class="font-weight-bolder mb-0">Servicio cerrado</h5>
+                                <p class="mb-0 text-sm">Información</p>
+                                <div class="multisteps-form__content">
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Fecha Atención: </label>
+                                            <label style="font-weight: 400;"> {{ service.attention_date }} </label>
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                            <label>Solución</label>
+                                            <label style="font-weight: 400;"> {{ service.solution }} </label>
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                        <label>Solución</label>
-                                        <label style="font-weight: 400;"> {{ service.solution }} </label>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Observaciones</label>
+                                            <label style="font-weight: 400;"> {{ service.observations }} </label>
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                            <label>Fecha cierre</label>
+                                            <label style="font-weight: 400;"> {{ service.closing_date }} </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Observaciones</label>
-                                        <label style="font-weight: 400;"> {{ service.observations }} </label>
-                                    </div>
-                                    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                        <label>Fecha cierre</label>
-                                        <label style="font-weight: 400;"> {{ service.closing_date }} </label>
+                                    <div v-if="service.qualify" class="row mt-3">
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                            <label>calificación</label>
+                                            <div class="icon icon-sm bg-gradient-info shadow text-center border-radius-md d-flex align-items-center justify-content-center" style="color: white;">
+                                               {{ service.qualify }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div v-else class="col-12 col-lg-8 m-auto my-3  ">
-                    <form @submit.prevent="updateService" class="multisteps-form__form mb-8">
-                        <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
-                            <h5 class="font-weight-bolder mb-0">Cerrar servicio</h5>
-                            <p class="mb-0 text-sm">Ingresa la información</p>
-                            <div class="multisteps-form__content">
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Fecha Atención</label>
-                                        <input class="form-control" type="datetime-local" id="meeting-time" v-model="service.attention_date">
+                    <div v-else class="col-12 col-lg-8 m-auto my-3  ">
+                        <form @submit.prevent="updateService" class="multisteps-form__form mb-8">
+                            <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active"
+                                 data-animation="FadeIn">
+                                <h5 class="font-weight-bolder mb-0">Cerrar servicio</h5>
+                                <p class="mb-0 text-sm">Ingresa la información</p>
+                                <div class="multisteps-form__content">
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Fecha Atención</label>
+                                            <input class="form-control" type="datetime-local" id="meeting-time"
+                                                   v-model="service.attention_date">
+                                        </div>
+                                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                            <label>Solución</label>
+                                            <input class="multisteps-form__input form-control" type="text"
+                                                   v-model="service.solution">
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                        <label>Solución</label>
-                                        <input class="multisteps-form__input form-control" type="text" v-model="service.solution">
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Observaciones</label>
+                                            <input class="multisteps-form__input form-control" type="text"
+                                                   v-model="service.observations">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label>Observaciones</label>
-                                        <input class="multisteps-form__input form-control" type="text" v-model="service.observations">
+                                    <div class="button-row d-flex mt-4">
+                                        <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit"
+                                                title="Next">Cerrar servicio
+                                        </button>
                                     </div>
-                                </div>
-                                <div class="button-row d-flex mt-4">
-                                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit" title="Next">Cerrar servicio</button>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-</template>
+
+
+
+            </template>
 
         </div>
     </div>
@@ -155,61 +183,83 @@ export default {
     name: "ServiceShow",
     data() {
         return {
-            service: { user: {} },
+            service: {user: {}},
             workplaces: null,
             close: false,
-            empty: null
+            empty: null,
         }
     },
     mounted() {
         this.getService()
         this.getWorkplaces();
-        this.rating();
     },
     methods: {
         getService() {
-            axios.get('/service/'+this.$route.params.id+'/edit').then(response => { this.service = response.data  }).catch(error =>  this.empty = error)
+            axios.get('/service/' + this.$route.params.id + '/edit').then(response => {
+                this.service = response.data
+            }).catch(error => this.empty = error)
         },
         getWorkplaces() {
-            axios.get('/workplaces').then(response => { this.workplaces = response.data  })
+            axios.get('/workplaces').then(response => {
+                this.workplaces = response.data
+            })
         },
         updateService() {
-            axios.put('/service/'+this.$route.params.id, this.service).then(() => this.close = true);
+            axios.put('/service/' + this.$route.params.id, this.service).then(() => this.close = true);
         },
-        rating(){
-            const ratingStars = [...document.getElementsByClassName("rating__star")];
-            const ratingResult = document.querySelector(".rating__result");
+        qualify(num) {
 
-            printRatingResult(ratingResult);
+            const star1 = document.getElementById("star1");
+            const star2 = document.getElementById("star2");
+            const star3 = document.getElementById("star3");
+            const star4 = document.getElementById("star4");
+            const star5 = document.getElementById("star5");
 
-            function executeRating(stars, result) {
-                const starClassActive = "rating__star fas fa-star";
-                const starClassUnactive = "rating__star far fa-star";
-                const starsLength = stars.length;
-                let i;
-                stars.map((star) => {
-                    star.onclick = () => {
-                        i = stars.indexOf(star);
+            if (num === 1) {
+                star1.classList.add("fas");
 
-                        if (star.className.indexOf(starClassUnactive) !== -1) {
-                            printRatingResult(result, i + 1);
-                            for (i; i >= 0; --i) stars[i].className = starClassActive;
-                        } else {
-                            printRatingResult(result, i);
-                            for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
-                        }
-                    };
-                });
+                star2.classList.remove("fas");
+                star3.classList.remove("fas");
+                star4.classList.remove("fas");
+                star5.classList.remove("fas");
             }
 
-            function printRatingResult(result, num = 0) {
-                result.textContent = `${num}/5`;
+            if (num === 2) {
+                star1.classList.add("fas");
+                star2.classList.add("fas");
 
-                console.log(result.textContent)
+                star3.classList.remove("fas");
+                star4.classList.remove("fas");
+                star5.classList.remove("fas");
             }
 
-            executeRating(ratingStars, ratingResult);
+            if (num === 3) {
+                star1.classList.add("fas");
+                star2.classList.add("fas");
+                star3.classList.add("fas");
 
+                star4.classList.remove("fas");
+                star5.classList.remove("fas");
+            }
+
+            if (num === 4) {
+                star1.classList.add("fas");
+                star2.classList.add("fas");
+                star3.classList.add("fas");
+                star4.classList.add("fas");
+
+                star5.classList.remove("fas");
+            }
+
+            if (num === 5) {
+                star1.classList.add("fas");
+                star2.classList.add("fas");
+                star3.classList.add("fas");
+                star4.classList.add("fas");
+                star5.classList.add("fas");
+            }
+
+            axios.put('/service/qualify/' + this.$route.params.id, {qualify: num})
         }
     }
 }

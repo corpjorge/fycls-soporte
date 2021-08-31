@@ -4,17 +4,26 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicationController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorkplaceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {  return view('welcome'); });
 
+Route::get('/service', [ServiceController::class, 'index']);
+Route::post('/service', [ServiceController::class, 'create']);
+Route::get('/service/{service}/edit', [ServiceController::class, 'edit']);
+Route::put('/service/{service}', [ServiceController::class, 'update']);
+
+Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
+Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/me', [AuthController::class, 'user']);
 
-    Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
+//    Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
     Route::get('/workplace/{id}', [WorkplaceController::class, 'workplace']);
     Route::get('/products', [WorkplaceController::class, 'productsWorkplace']);
 
@@ -24,7 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('workplace/{id}/devices', [DeviceController::class, 'DevicesWorkplace']);
     Route::get('workplace/{id}/products', [ProductController::class, 'productsWorkplace']);
-    Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);
+//    Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);
 
     Route::get('workplace/{id}/devices/total', [DeviceController::class, 'devicesWorkplaceTotal']);
     Route::get('workplace/{id}/products/total', [ProductController::class, 'productsWorkplaceTotal']);

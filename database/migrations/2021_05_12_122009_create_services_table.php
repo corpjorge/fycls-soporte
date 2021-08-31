@@ -18,12 +18,13 @@ class CreateServicesTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('agent_id')->unsigned()->nullable();
             $table->foreign('agent_id')->references('id')->on('users');
-            $table->string('type')->index();
+            $table->string('type_attention')->index();
+            $table->string('type_service')->index();
             $table->text('reason');
             $table->text('solution')->nullable();
-            $table->date('creation_date');
-            $table->date('attention_date')->nullable();
-            $table->date('closing_date')->nullable();
+            $table->text('observations')->nullable();
+            $table->dateTime('attention_date')->nullable();
+            $table->dateTimeTz('closing_date')->nullable();
             $table->integer('qualify')->nullable();
             $table->timestamps();
         });

@@ -54,4 +54,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Service::class);
     }
+
+    public function workplace(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Workplace::class);
+    }
 }

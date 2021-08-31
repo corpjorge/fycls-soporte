@@ -2016,7 +2016,7 @@ var _hoisted_11 = {
   "class": "multisteps-form__content"
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Error al obtener datos del servicio: ");
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Error al obtener datos del servicio: ");
 
 var _hoisted_13 = {
   style: {
@@ -2144,7 +2144,7 @@ var _hoisted_43 = {
   "class": "col-12 col-sm-6"
 };
 
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", null, "Técnico", -1
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", null, "Ingeniero", -1
 /* HOISTED */
 );
 

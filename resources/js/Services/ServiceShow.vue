@@ -8,8 +8,6 @@
                     </div>
                 </div>
             </div>
-
-
             <template v-if="$route.query.token === service.token" >
                 <div  v-if="!service.qualify" class="col-12 col-lg-8 m-auto">
                     <h4>Calificar</h4>
@@ -23,16 +21,16 @@
                     </div>
                 </div>
             </template>
-
             <template v-if="empty">
                 <div class="col-12 col-lg-8 m-auto">
                     <div class="multisteps-form__form" style="height: 327px;">
                         <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active"
                              data-animation="FadeIn">
                             <div class="multisteps-form__content">
-                                <h5>Error al obtener datos del servicio: <b style="color: #ff4f4f;"> {{
-                                        $route.params.id
-                                    }} </b></h5>
+                                <h5>
+                                    Error al obtener datos del servicio:
+                                    <b style="color: #ff4f4f;"> {{$route.params.id}}</b>
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -40,7 +38,6 @@
             </template>
 
             <template v-else>
-
                 <div class="row">
                     <div class="col-12 col-lg-8 m-auto my-3">
                         <div class="multisteps-form__form">
@@ -87,17 +84,14 @@
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-12 col-sm-6">
-                                            <label>Técnico</label>
+                                            <label>Ingeniero</label>
                                             <label style="font-weight: 400;"> {{ service.agent.name }} </label>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                     <div v-if="service.closing_date || close" class="col-12 col-lg-8 m-auto my-3">
                         <div class="multisteps-form__form">
                             <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active"
@@ -174,11 +168,7 @@
                         </form>
                     </div>
                 </div>
-
-
-
             </template>
-
         </div>
     </div>
 </template>

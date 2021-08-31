@@ -57,7 +57,7 @@
                                         </select>
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label>Técnico </label>
+                                        <label>Ingeniero </label>
                                         <select class="form-control" id="exampleFormControlSelect1" v-model="service.agent_id">
                                             <option v-for="agent in agents" :value="agent.id" >{{agent.name}}</option>
                                         </select>

@@ -9,7 +9,8 @@
                 </div>
             </div>
             <template v-if="$route.query.token === service.token" >
-                <div  v-if="!service.qualify" class="col-12 col-lg-8 m-auto">
+<!--                v-if="!service.qualify"-->
+                <div  class="col-12 col-lg-8 m-auto">
                     <h4>Calificar</h4>
                     <div class="rating">
                         <span class="rating__result"></span>
@@ -20,6 +21,10 @@
                         <i class="rating__star far fa-star" id="star5" @click="qualify(5)"></i>
                     </div>
                 </div>
+                <div  v-if="show" class="col-12 col-lg-8 m-auto my-2">
+                    <a href="http://fyclsingenieria.com/" class="btn btn-sm bg-gradient-info ms-auto mb-0 js-btn-next">Guardar</a>
+                </div>
+
             </template>
             <template v-if="empty">
                 <div class="col-12 col-lg-8 m-auto">
@@ -184,6 +189,7 @@ export default {
             workplaces: null,
             close: false,
             empty: null,
+            show: false
         }
     },
     mounted() {
@@ -255,6 +261,8 @@ export default {
                 star4.classList.add("fas");
                 star5.classList.add("fas");
             }
+
+            this.show = true;
 
             axios.put('/service/qualify/' + this.$route.params.id, {qualify: num})
         }

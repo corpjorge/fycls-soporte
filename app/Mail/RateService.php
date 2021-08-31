@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class OrderShipped extends Mailable
+class RateService extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -35,9 +35,10 @@ class OrderShipped extends Mailable
     public function build()
     {
         return $this->from('jorge.peralta@fyclsingenieria.com', 'Soporte Fycls')
-            ->subject('Servicio creado')
-            ->markdown('emails.service', [
-                'service' => $this->service->id
-            ]);
+            ->subject('Servicio solucionado')
+            ->markdown('emails.rate', [
+            'url' => 'https://soporte.fyclsingenieria.com/service#/show/'.$this->service->id.'?token='.$this->service->token,
+        ]);
+
     }
 }

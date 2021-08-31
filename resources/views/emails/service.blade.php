@@ -1,12 +1,17 @@
 @component('mail::message')
-# Servicio numero
+# Soporte FYCLS ingeniería
 
 Tu servicio ha sido creado!
 
-@component('mail::button', ['url' => $url])
-View Order
-@endcomponent
+Numero: {{$service->id}}
 
-Thanks,<br>
+Motivo: {{$service->reason}}
+
+Tipo de atención: {{$service->type_attention}}
+
+Tipo de servicio: {{$service->type_service}}
+
+
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent

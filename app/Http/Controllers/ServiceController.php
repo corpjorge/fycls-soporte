@@ -23,7 +23,7 @@ class ServiceController extends Controller
 
     public function edit(Service $service): Service
     {
-        return $service->load('user');
+        return $service->load('user')->load('agent');
     }
 
     public function update(Request $request, Service $service): bool

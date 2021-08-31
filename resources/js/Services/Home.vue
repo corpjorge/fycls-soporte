@@ -56,6 +56,12 @@
                                             <option value="Publica">Publica</option>
                                         </select>
                                     </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Técnico </label>
+                                        <select class="form-control" id="exampleFormControlSelect1" v-model="service.agent_id">
+                                            <option v-for="agent in agents" :value="agent.id" >{{agent.name}}</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="button-row d-flex mt-4">
                                     <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit" title="Next">Crear</button>
@@ -98,18 +104,23 @@ export default {
             users: null,
             caso: null,
             service: {},
-            caso_create: {}
+            caso_create: {},
+            agents: {}
         }
     },
     mounted() {
         this.getWorkplaces();
+        this.getAgents();
     },
     methods: {
         getWorkplaces() {
             axios.get('/workplaces').then(response => { this.workplaces = response.data })
         },
         getUsers(){
-            axios.get('workplace/'+this.workplace_id+'/users').then( response => { this.users = response.data })
+            axios.get('/workplace/'+this.workplace_id+'/users').then( response => { this.users = response.data })
+        },
+        getAgents(){
+            axios.get('/agents').then( response => { this.agents = response.data })
         },
         createService(){
             axios.post('/service', this.service ).then(response => {

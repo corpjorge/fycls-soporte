@@ -85,6 +85,13 @@
                                             <label style="font-weight: 400;"> {{ service.created_at }} </label>
                                         </div>
                                     </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label>Técnico</label>
+                                            <label style="font-weight: 400;"> {{ service.agent.name }} </label>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +190,7 @@ export default {
     name: "ServiceShow",
     data() {
         return {
-            service: {user: {}},
+            service: {user: {}, agent: {}},
             workplaces: null,
             close: false,
             empty: null,

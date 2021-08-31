@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\ProductController;
@@ -19,6 +20,11 @@ Route::put('/service/qualify/{service}', [ServiceController::class, 'qualify']);
 
 Route::get('/workplaces', [WorkplaceController::class, 'workplaceList']);
 Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);
+
+Route::get('/agents', [AdminController::class, 'agents']);
+
+
+
 
 Route::group(['middleware' => 'auth'], function () {
 

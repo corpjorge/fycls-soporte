@@ -1858,7 +1858,8 @@ __webpack_require__.r(__webpack_exports__);
       workplaces: null,
       close: false,
       empty: null,
-      show: false
+      show: false,
+      moment: false
     };
   },
   mounted: function mounted() {
@@ -1885,8 +1886,9 @@ __webpack_require__.r(__webpack_exports__);
     updateService: function updateService() {
       var _this3 = this;
 
+      this.moment = true;
       axios__WEBPACK_IMPORTED_MODULE_0___default().put('/service/' + this.$route.params.id, this.service).then(function () {
-        return _this3.close = true;
+        _this3.close = true;
       });
     },
     qualify: function qualify(num) {
@@ -2333,6 +2335,13 @@ var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
+var _hoisted_86 = {
+  key: 0,
+  id: "fountainG"
+};
+
+var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"fountainG_1\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_2\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_3\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_4\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_5\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_6\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_7\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_8\" class=\"fountainG\" data-v-28ca0fc2></div>", 8);
+
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
@@ -2438,7 +2447,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.service.observations]])])]), _hoisted_85])])], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.service.observations]])])]), _hoisted_85, $data.moment ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_86, [_hoisted_87])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])], 32
   /* HYDRATE_EVENTS */
   )]))]))])]);
 });
@@ -2455,7 +2464,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "\n.rating[data-v-28ca0fc2] {\n    position: relative;\n    width: 180px;\n    background: transparent;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: .3em;\n    padding: 5px;\n    overflow: hidden;\n    border-radius: 20px;\n    box-shadow: 0 0 2px #b3acac;\n}\n.rating__result[data-v-28ca0fc2] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    transform: translateY(-10px) translateX(-5px);\n    z-index: -9;\n    font: 3em Arial, Helvetica, sans-serif;\n    color: #ebebeb8e;\n    pointer-events: none;\n}\n.rating__star[data-v-28ca0fc2] {\n    font-size: 1.3em;\n    cursor: pointer;\n    color: #dabd18b2;\n    transition: filter linear .3s;\n}\n.rating__star[data-v-28ca0fc2]:hover {\n    filter: drop-shadow(1px 1px 4px gold);\n}\n\n\n", ""]);
+exports.push([module.id, "\n.rating[data-v-28ca0fc2] {\n    position: relative;\n    width: 180px;\n    background: transparent;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: .3em;\n    padding: 5px;\n    overflow: hidden;\n    border-radius: 20px;\n    box-shadow: 0 0 2px #b3acac;\n}\n.rating__result[data-v-28ca0fc2] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    transform: translateY(-10px) translateX(-5px);\n    z-index: -9;\n    font: 3em Arial, Helvetica, sans-serif;\n    color: #ebebeb8e;\n    pointer-events: none;\n}\n.rating__star[data-v-28ca0fc2] {\n    font-size: 1.3em;\n    cursor: pointer;\n    color: #dabd18b2;\n    transition: filter linear .3s;\n}\n.rating__star[data-v-28ca0fc2]:hover {\n    filter: drop-shadow(1px 1px 4px gold);\n}\n#fountainG[data-v-28ca0fc2]{\n    position:relative;\n    width:234px;\n    height:28px;\n    margin:auto;\n}\n.fountainG[data-v-28ca0fc2]{\n    position:absolute;\n    top:0;\n    background-color:rgb(212,23,212);\n    width:28px;\n    height:28px;\n    animation-name:bounce_fountainG-28ca0fc2;\n    -o-animation-name:bounce_fountainG-28ca0fc2;\n    -ms-animation-name:bounce_fountainG-28ca0fc2;\n    -webkit-animation-name:bounce_fountainG-28ca0fc2;\n    -moz-animation-name:bounce_fountainG-28ca0fc2;\n    animation-duration:1.5s;\n    -o-animation-duration:1.5s;\n    -ms-animation-duration:1.5s;\n    -webkit-animation-duration:1.5s;\n    -moz-animation-duration:1.5s;\n    animation-iteration-count:infinite;\n    -o-animation-iteration-count:infinite;\n    -ms-animation-iteration-count:infinite;\n    -webkit-animation-iteration-count:infinite;\n    -moz-animation-iteration-count:infinite;\n    animation-direction:normal;\n    -o-animation-direction:normal;\n    -ms-animation-direction:normal;\n    -webkit-animation-direction:normal;\n    -moz-animation-direction:normal;\n    transform:scale(.3);\n    -o-transform:scale(.3);\n    -ms-transform:scale(.3);\n    -webkit-transform:scale(.3);\n    -moz-transform:scale(.3);\n    border-radius:19px;\n    -o-border-radius:19px;\n    -ms-border-radius:19px;\n    -webkit-border-radius:19px;\n    -moz-border-radius:19px;\n}\n#fountainG_1[data-v-28ca0fc2]{\n    left:0;\n    animation-delay:0.6s;\n    -o-animation-delay:0.6s;\n    -ms-animation-delay:0.6s;\n    -webkit-animation-delay:0.6s;\n    -moz-animation-delay:0.6s;\n}\n#fountainG_2[data-v-28ca0fc2]{\n    left:29px;\n    animation-delay:0.75s;\n    -o-animation-delay:0.75s;\n    -ms-animation-delay:0.75s;\n    -webkit-animation-delay:0.75s;\n    -moz-animation-delay:0.75s;\n}\n#fountainG_3[data-v-28ca0fc2]{\n    left:58px;\n    animation-delay:0.9s;\n    -o-animation-delay:0.9s;\n    -ms-animation-delay:0.9s;\n    -webkit-animation-delay:0.9s;\n    -moz-animation-delay:0.9s;\n}\n#fountainG_4[data-v-28ca0fc2]{\n    left:88px;\n    animation-delay:1.05s;\n    -o-animation-delay:1.05s;\n    -ms-animation-delay:1.05s;\n    -webkit-animation-delay:1.05s;\n    -moz-animation-delay:1.05s;\n}\n#fountainG_5[data-v-28ca0fc2]{\n    left:117px;\n    animation-delay:1.2s;\n    -o-animation-delay:1.2s;\n    -ms-animation-delay:1.2s;\n    -webkit-animation-delay:1.2s;\n    -moz-animation-delay:1.2s;\n}\n#fountainG_6[data-v-28ca0fc2]{\n    left:146px;\n    animation-delay:1.35s;\n    -o-animation-delay:1.35s;\n    -ms-animation-delay:1.35s;\n    -webkit-animation-delay:1.35s;\n    -moz-animation-delay:1.35s;\n}\n#fountainG_7[data-v-28ca0fc2]{\n    left:175px;\n    animation-delay:1.5s;\n    -o-animation-delay:1.5s;\n    -ms-animation-delay:1.5s;\n    -webkit-animation-delay:1.5s;\n    -moz-animation-delay:1.5s;\n}\n#fountainG_8[data-v-28ca0fc2]{\n    left:205px;\n    animation-delay:1.64s;\n    -o-animation-delay:1.64s;\n    -ms-animation-delay:1.64s;\n    -webkit-animation-delay:1.64s;\n    -moz-animation-delay:1.64s;\n}\n@keyframes bounce_fountainG-28ca0fc2{\n0%{\n        transform:scale(1);\n        background-color:rgb(65,69,148);\n}\n100%{\n        transform:scale(.3);\n        background-color:rgb(255,255,255);\n}\n}\n@-o-keyframes bounce_fountainG-28ca0fc2{\n0%{\n        -o-transform:scale(1);\n        background-color:rgb(65,69,148);\n}\n100%{\n        -o-transform:scale(.3);\n        background-color:rgb(255,255,255);\n}\n}\n@-ms-keyframes bounce_fountainG-28ca0fc2{\n0%{\n        -ms-transform:scale(1);\n        background-color:rgb(65,69,148);\n}\n100%{\n        -ms-transform:scale(.3);\n        background-color:rgb(255,255,255);\n}\n}\n@-webkit-keyframes bounce_fountainG-28ca0fc2{\n0%{\n        -webkit-transform:scale(1);\n        background-color:rgb(65,69,148);\n}\n100%{\n        -webkit-transform:scale(.3);\n        background-color:rgb(255,255,255);\n}\n}\n@-moz-keyframes bounce_fountainG-28ca0fc2{\n0%{\n        -moz-transform:scale(1);\n        background-color:rgb(65,69,148);\n}\n100%{\n        -moz-transform:scale(.3);\n        background-color:rgb(255,255,255);\n}\n}\n\n\n\n", ""]);
 // Exports
 module.exports = exports;
 

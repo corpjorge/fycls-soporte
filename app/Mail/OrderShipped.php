@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Service;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -10,6 +11,11 @@ use Illuminate\Queue\SerializesModels;
 class OrderShipped extends Mailable
 {
     use Queueable, SerializesModels;
+
+    /**
+     * @var Service
+     */
+    public $service;
 
     /**
      * Create a new message instance.

@@ -14994,6 +14994,12 @@ var routes = [{
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_Services_ServiceShow_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./ServiceShow */ "./resources/js/Services/ServiceShow.vue"));
   }
+}, {
+  path: '/user',
+  name: 'Service-user',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_Services_Users_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./Users */ "./resources/js/Services/Users.vue"));
+  }
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHashHistory)(process.env.BASE_URL),
@@ -18924,7 +18930,7 @@ function compileToFunction(template, options) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Services_Home_vue":1,"resources_js_Services_ServiceFind_vue":1,"resources_js_Services_ServiceShow_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Services_Home_vue":1,"resources_js_Services_ServiceFind_vue":1,"resources_js_Services_ServiceShow_vue":1,"resources_js_Services_Users_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

@@ -23,6 +23,8 @@ Route::get('workplace/{id}/users', [UserController::class, 'usersWorkplace']);
 
 Route::get('/agents', [AdminController::class, 'agents']);
 
+Route::post('/user', [UserController::class, 'create']);
+
 
 
 

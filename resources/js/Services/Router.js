@@ -17,6 +17,11 @@ const routes = [
         name: 'Service-show',
         component: () => import('./ServiceShow')
     },
+    {
+        path: '/user',
+        name: 'Service-user',
+        component: () => import('./Users')
+    },
 
 ]
 

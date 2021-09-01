@@ -8,9 +8,8 @@
                     </div>
                 </div>
             </div>
-            <template v-if="$route.query.token === service.token" >
-<!--                v-if="!service.qualify"-->
-                <div  class="col-12 col-lg-8 m-auto">
+            <template v-if="$route.query.token === service.token">
+                <div v-if="!service.qualify" class="col-12 col-lg-8 m-auto">
                     <h4>Calificar</h4>
                     <div class="rating">
                         <span class="rating__result"></span>

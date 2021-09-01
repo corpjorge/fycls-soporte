@@ -63,9 +63,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="button-row d-flex mt-4">
-                                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit" title="Next">Crear</button>
-                                </div>
+                                <br>
                                 <div v-if="moment" id="fountainG">
                                     <div id="fountainG_1" class="fountainG"></div>
                                     <div id="fountainG_2" class="fountainG"></div>
@@ -75,6 +73,14 @@
                                     <div id="fountainG_6" class="fountainG"></div>
                                     <div id="fountainG_7" class="fountainG"></div>
                                     <div id="fountainG_8" class="fountainG"></div>
+                                </div>
+                                <br>
+                                <div v-if="error" class="alert alert-danger" role="alert" style="color: #ffffff ">
+                                    Todos los campos deben estar llenos
+                                </div>
+
+                                <div class="button-row d-flex mt-4">
+                                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit" title="Next">Crear</button>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +122,8 @@ export default {
             service: {},
             caso_create: {},
             agents: {},
-            moment: false
+            moment: false,
+            error: false,
         }
     },
     mounted() {
@@ -135,6 +142,33 @@ export default {
         },
         createService(){
             this.moment = true;
+            if (!this.workplace_id){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.user_id){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.reason){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.type_attention){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.type_service){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.agent_id){
+                this.error = true;
+                return this.moment = false;
+            }
+
+            this.error = false;
+
             axios.post('/service', this.service ).then(response => {
                 this.caso_create = this.service
                 this.caso = response.data;

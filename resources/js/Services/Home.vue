@@ -63,6 +63,16 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="row mt-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label>Prioridad</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" v-model="service.priority">
+                                            <option value="Bajo">Bajo</option>
+                                            <option value="Medio">Medio</option>
+                                            <option value="Alto">Alto</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <br>
                                 <div v-if="moment" id="fountainG">
                                     <div id="fountainG_1" class="fountainG"></div>

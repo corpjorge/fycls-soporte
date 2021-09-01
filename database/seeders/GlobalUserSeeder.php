@@ -43,7 +43,7 @@ class GlobalUserSeeder extends Seeder
             'name' => 'Holman Fonseca',
             'email' => 'holman.fonseca@fyclsingenieria.com',
             'password' => Hash::make('12342wefdgsasdf@'),
-            'workplace_id' => 2,
+            'workplace_id' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -54,7 +54,7 @@ class GlobalUserSeeder extends Seeder
             'name' => 'Freddy Leonardo Contreras Carrasco',
             'email' => 'freddy.contreras@fyclsingenieria.com',
             'password' => Hash::make('12342wefdgsasdf@'),
-            'workplace_id' => 2,
+            'workplace_id' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -62,21 +62,10 @@ class GlobalUserSeeder extends Seeder
         DB::table('users')->insert([
             'id' => 5,
             'role_id' => 2,
-            'name' => 'Luis Eduardo',
-            'email' => 'luis.eEduardo@fyclsingenieria.com',
-            'password' => Hash::make('12342wefdgsasdf@'),
-            'workplace_id' => 2,
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
-
-        DB::table('users')->insert([
-            'id' => 6,
-            'role_id' => 2,
             'name' => 'Andros Sierra',
             'email' => 'andros.sierra@fyclsingenieria.com',
             'password' => Hash::make('12342wefdgsasdf@'),
-            'workplace_id' => 2,
+            'workplace_id' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);

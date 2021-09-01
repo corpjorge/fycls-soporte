@@ -91,6 +91,10 @@
                                             <label>Ingeniero</label>
                                             <label style="font-weight: 400;"> {{ service.agent.name }} </label>
                                         </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label>Prioridad</label>
+                                            <label style="font-weight: 400;"> {{ service.priority }} </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

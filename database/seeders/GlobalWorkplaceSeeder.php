@@ -32,8 +32,16 @@ class GlobalWorkplaceSeeder extends Seeder
 
         DB::table('workplaces')->insert([
             'id' => 3,
-            'name' => 'Gmail',
-            'domain' => 'gmail.com',
+            'name' => 'Gessig',
+            'domain' => 'gessig.com',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('workplaces')->insert([
+            'id' => 4,
+            'name' => 'Cámara de comercio electrónico',
+            'domain' => 'cce.org.co',
             'created_at' => now(),
             'updated_at' => now()
         ]);

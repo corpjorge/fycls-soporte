@@ -162,11 +162,7 @@
                                                    v-model="service.observations">
                                         </div>
                                     </div>
-                                    <div class="button-row d-flex mt-4">
-                                        <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit"
-                                                title="Next">Cerrar servicio
-                                        </button>
-                                    </div>
+                                    <br>
                                     <div v-if="moment" id="fountainG">
                                         <div id="fountainG_1" class="fountainG"></div>
                                         <div id="fountainG_2" class="fountainG"></div>
@@ -176,6 +172,14 @@
                                         <div id="fountainG_6" class="fountainG"></div>
                                         <div id="fountainG_7" class="fountainG"></div>
                                         <div id="fountainG_8" class="fountainG"></div>
+                                    </div>
+                                    <div v-if="error" class="alert alert-danger" role="alert" style="color: #ffffff ">
+                                        Todos los campos deben estar llenos
+                                    </div>
+                                    <div class="button-row d-flex mt-4">
+                                        <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit"
+                                                title="Next">Cerrar servicio
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +203,8 @@ export default {
             close: false,
             empty: null,
             show: false,
-            moment: false
+            moment: false,
+            error: false,
         }
     },
     mounted() {
@@ -219,6 +224,22 @@ export default {
         },
         updateService() {
             this.moment = true;
+
+            if (!this.service.attention_date){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.solution){
+                this.error = true;
+                return this.moment = false;
+            }
+            if (!this.service.observations){
+                this.error = true;
+                return this.moment = false;
+            }
+
+            this.error = false;
+
             axios.put('/service/' + this.$route.params.id, this.service).then(() => {
                 this.close = true;
                 this.getService()

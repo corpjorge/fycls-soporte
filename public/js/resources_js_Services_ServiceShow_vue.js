@@ -1859,7 +1859,8 @@ __webpack_require__.r(__webpack_exports__);
       close: false,
       empty: null,
       show: false,
-      moment: false
+      moment: false,
+      error: false
     };
   },
   mounted: function mounted() {
@@ -1887,6 +1888,23 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       this.moment = true;
+
+      if (!this.service.attention_date) {
+        this.error = true;
+        return this.moment = false;
+      }
+
+      if (!this.service.solution) {
+        this.error = true;
+        return this.moment = false;
+      }
+
+      if (!this.service.observations) {
+        this.error = true;
+        return this.moment = false;
+      }
+
+      this.error = false;
       axios__WEBPACK_IMPORTED_MODULE_0___default().put('/service/' + this.$route.params.id, this.service).then(function () {
         _this3.close = true;
 
@@ -2328,13 +2346,7 @@ var _hoisted_84 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "button-row d-flex mt-4"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn bg-gradient-dark ms-auto mb-0 js-btn-next",
-  type: "submit",
-  title: "Next"
-}, "Cerrar servicio ")], -1
+var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br", null, null, -1
 /* HOISTED */
 );
 
@@ -2344,6 +2356,25 @@ var _hoisted_86 = {
 };
 
 var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"fountainG_1\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_2\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_3\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_4\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_5\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_6\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_7\" class=\"fountainG\" data-v-28ca0fc2></div><div id=\"fountainG_8\" class=\"fountainG\" data-v-28ca0fc2></div>", 8);
+
+var _hoisted_95 = {
+  key: 1,
+  "class": "alert alert-danger",
+  role: "alert",
+  style: {
+    "color": "#ffffff"
+  }
+};
+
+var _hoisted_96 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "button-row d-flex mt-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+  "class": "btn bg-gradient-dark ms-auto mb-0 js-btn-next",
+  type: "submit",
+  title: "Next"
+}, "Cerrar servicio ")], -1
+/* HOISTED */
+);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -2450,7 +2481,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.service.observations]])])]), _hoisted_85, $data.moment ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_86, [_hoisted_87])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.service.observations]])])]), _hoisted_85, $data.moment ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_86, [_hoisted_87])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.error ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_95, " Todos los campos deben estar llenos ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_96])])], 32
   /* HYDRATE_EVENTS */
   )]))]))])]);
 });

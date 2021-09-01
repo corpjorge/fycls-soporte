@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <label>Fecha Solicitud</label>
-                                            <label style="font-weight: 400;"> {{ service.created_at }} </label>
+                                            <label style="font-weight: 400;"> {{ service.created_date }} </label>
                                         </div>
                                     </div>
                                     <div class="row mt-3">
@@ -221,6 +221,7 @@ export default {
             this.moment = true;
             axios.put('/service/' + this.$route.params.id, this.service).then(() => {
                 this.close = true;
+                this.getService()
             } );
         },
         qualify(num) {

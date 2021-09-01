@@ -20,6 +20,7 @@ class ServiceController extends Controller
     public function create(Request $request, Service $service)
     {
         $service->fill($request->all());
+        $service->created_date = Carbon::now();
         $service->save();
         Mail::to($service->user->email)->send(new OrderShipped($service));
         return $service->id;

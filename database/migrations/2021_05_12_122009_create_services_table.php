@@ -23,8 +23,9 @@ class CreateServicesTable extends Migration
             $table->text('reason');
             $table->text('solution')->nullable();
             $table->text('observations')->nullable();
+            $table->dateTime('created_date')->nullable();
             $table->dateTime('attention_date')->nullable();
-            $table->dateTimeTz('closing_date')->nullable();
+            $table->dateTime('closing_date')->nullable();
             $table->integer('qualify')->nullable();
             $table->text('token')->nullable();
             $table->timestamps();

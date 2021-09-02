@@ -34,7 +34,7 @@ class RateService extends Mailable
      */
     public function build()
     {
-        return $this->from('jorge.peralta@fyclsingenieria.com', 'Soporte Fycls')
+        return $this->from('holman.fonseca@fyclsingenieria.com', 'Soporte Fycls')
             ->subject('Servicio solucionado')
             ->markdown('emails.rate', [
             'url' => 'https://soporte.fyclsingenieria.com/service#/show/'.$this->service->id.'?token='.$this->service->token,

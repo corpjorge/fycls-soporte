@@ -34,7 +34,7 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('jorge.peralta@fyclsingenieria.com', 'Soporte Fycls')
+        return $this->from('holman.fonseca@fyclsingenieria.com', 'Soporte Fycls')
             ->subject('Servicio creado')
             ->markdown('emails.service', [
                 'service' => $this->service->id
